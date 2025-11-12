@@ -1,0 +1,7 @@
+<!--suppress AndroidDomInspection -->
+<resources>
+    <!--suppress AndroidDomInspection -->
+    <style name="Theme.TarotReader" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

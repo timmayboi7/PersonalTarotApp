@@ -2,9 +2,8 @@ package com.timmay.tarot.repo
 
 import com.timmay.tarot.domain.Spread
 import com.timmay.tarot.domain.Position
-import javax.inject.Inject
 
-class SpreadRepository @Inject constructor() {
+class SpreadRepository {
     fun all(): List<Spread> = listOf(
         Spread("single", "Single Card", listOf(Position("Message"))),
         Spread("three_card", "Past • Present • Future", listOf(

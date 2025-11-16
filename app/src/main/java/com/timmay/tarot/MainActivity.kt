@@ -3,7 +3,6 @@ package com.timmay.tarot
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material3.Surface
 import androidx.core.view.WindowCompat
 import com.timmay.tarot.ui.TarotAppRoot
 import com.timmay.tarot.ui.theme.TarotReaderTheme
@@ -16,9 +15,7 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             TarotReaderTheme {
-                Surface {
-                    TarotAppRoot()
-                }
+                TarotAppRoot()
             }
         }
     }

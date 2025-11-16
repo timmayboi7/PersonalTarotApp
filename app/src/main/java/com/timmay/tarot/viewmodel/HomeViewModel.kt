@@ -27,7 +27,7 @@ class HomeViewModel @Inject constructor(private val cardStore: CardStore) : View
                     val zone = ZoneId.systemDefault()
                     val dailySeed = TarotRng.dailySeed(zone)
                     val cards = cardStore.all()
-                    val idx = kotlin.random.Random(dailySeed).nextInt(cards.size)
+                    val idx = TarotRng.random(dailySeed).nextInt(cards.size)
                     _dailyCard.value = cards[idx].name
                 }
             }

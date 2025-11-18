@@ -1,5 +1,7 @@
 package com.timmay.tarot.ui.screens
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -13,6 +15,7 @@ import com.timmay.tarot.repo.CardStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun HomeScreen(nav: NavController) {
     val zone = remember { ZoneId.systemDefault() }

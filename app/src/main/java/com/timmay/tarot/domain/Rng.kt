@@ -8,7 +8,7 @@ import kotlin.random.Random
 object TarotRng {
     fun secureSeed(): Long = SecureRandom().nextLong()
     fun dailySeed(zone: ZoneId): Long {
-        val day = LocalDate.now(zone).toEpochDay()
+        val day = LocalDate.vnow(zone).toEpochDay()
         return day xor 0x5A5A5A5AL
     }
     fun random(seed: Long): Random = Random(seed)

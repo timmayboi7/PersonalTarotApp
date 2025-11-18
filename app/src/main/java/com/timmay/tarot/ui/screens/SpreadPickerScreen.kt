@@ -21,22 +21,31 @@ import androidx.navigation.NavController
 import com.timmay.tarot.viewmodel.SpreadPickerViewModel
 
 @Composable
-fun SpreadPickerScreen(nav: NavController, vm: SpreadPickerViewModel = hiltViewModel()) {
-    val spreads by vm.spreads.collectAsState()
+fun SpreadPickerScreen(
+    nav: NavController,
+    viewModel: SpreadPickerViewModel = hiltViewModel()
+) {
+    val spreads by viewModel.spreads.collectAsState()
 
-    LaunchedEffect(Unit) {
-        vm.fetchSpreads()
-    }
+        LaunchedEffect(Unit) {
+            viewModel.fetchSpreads()
+        }
 
-    LazyColumn(Modifier.fillMaxSize().padding(16.dp)) {
-        items(spreads) { s ->
-            ElevatedCard(onClick = { nav.navigate("reading/" + s.id) }, modifier = Modifier.padding(8.dp)) {
-                Column(Modifier.padding(16.dp)) {
-                    Text(s.name, style = MaterialTheme.typography.titleLarge)
-                    Spacer(Modifier.height(6.dp))
-                    Text(s.positions.joinToString(" • ") { it.label }, style = MaterialTheme.typography.bodyMedium)
+        LazyColumn(Modifier.fillMaxSize().padding(16.dp)) {
+            items(spreads) { s ->
+                ElevatedCard(
+                    onClick = { nav.navigate("reading/" + s.id) },
+                    modifier = Modifier.padding(8.dp)
+                ) {
+                    Column(Modifier.padding(16.dp)) {
+                        Text(s.name, style = MaterialTheme.typography.titleLarge)
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            s.positions.joinToString(" • ") { it.label },
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
                 }
             }
         }
     }
-}

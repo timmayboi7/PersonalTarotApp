@@ -6,7 +6,7 @@
       android:icon="@mipmap/ic_launcher"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
-      android:theme="@style/Theme.TarotReader">
+      android:theme="@style/Theme.TarotReader.Splash">
     <activity
         android:name="com.timmay.tarot.MainActivity"
         android:exported="true">

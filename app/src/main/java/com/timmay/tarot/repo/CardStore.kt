@@ -7,16 +7,11 @@ import java.io.InputStream
 
 class CardStore {
     private val json = Json { ignoreUnknownKeys = true }
-
     fun all(): List<TarotCard> {
-        val stream: InputStream = CardStore::class.java.classLoader
-            ?.getResourceAsStream("assets/deck.json")
-            ?: throw MissingDeckException()
+        val stream: InputStream = CardStore::class.java.classLoader!!
+            .getResourceAsStream("assets/deck.json")
+            ?: error("deck.json not found")
         val text = stream.reader().readText()
         return json.decodeFromString(text)
     }
-
-    class MissingDeckException : IllegalStateException(
-        "Missing deck asset. Add app/src/main/assets/deck.json before running a reading."
-    )
 }

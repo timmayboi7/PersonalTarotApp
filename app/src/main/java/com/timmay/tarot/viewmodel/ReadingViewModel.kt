@@ -18,7 +18,6 @@ class ReadingViewModel: ViewModel() {
             val cards: List<CardWithCard>,
             val prose: String
         ): Ui()
-        data class Error(val message: String): Ui()
     }
 
     private val _ui = MutableStateFlow<Ui>(Ui.Loading)
@@ -26,26 +25,19 @@ class ReadingViewModel: ViewModel() {
 
     fun start(spreadId: String) {
         viewModelScope.launch {
-            _ui.value = Ui.Loading
-            runCatching {
-                val spreads = SpreadRepository()
-                val spread = spreads.byId(spreadId)
-                val deckRepo = DeckRepository(CardStore())
-                val seed = TarotRng.secureSeed()
-                val shuffled = deckRepo.shuffled(seed)
+            val spreads = SpreadRepository()
+            val spread = spreads.byId(spreadId)
+            val deckRepo = DeckRepository(CardStore())
+            val seed = TarotRng.secureSeed()
+            val shuffled = deckRepo.shuffled(seed)
 
-                val allCards = CardStore().all().associateBy { it.id }
-                val dealt = shuffled.take(spread.positions.size).map { d ->
-                    val card = allCards[d.cardId] ?: error("Card not found: " + d.cardId)
-                    CardWithCard(card, d.isReversed)
-                }
-                val prose = Interpreter().compose(spread, dealt)
-                Ui.Result(spread, dealt, prose)
-            }.onSuccess { state ->
-                _ui.value = state
-            }.onFailure { throwable ->
-                _ui.value = Ui.Error(throwable.message ?: "Unable to load deck data.")
+            val allCards = CardStore().all().associateBy { it.id }
+            val dealt = shuffled.take(spread.positions.size).map { d ->
+                val card = allCards[d.cardId] ?: error("Card not found: " + d.cardId)
+                CardWithCard(card, d.isReversed)
             }
+            val prose = Interpreter().compose(spread, dealt)
+            _ui.value = Ui.Result(spread, dealt, prose)
         }
     }
 }

@@ -2,13 +2,24 @@ package com.timmay.tarot.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.timmay.tarot.domain.Interpreter
+import com.timmay.tarot.domain.ReadingCard
+import com.timmay.tarot.domain.Spread
+import com.timmay.tarot.domain.TarotRng
+import com.timmay.tarot.repo.DeckRepository
+import com.timmay.tarot.repo.SpreadRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import com.timmay.tarot.repo.SpreadRepository
-import com.timmay.tarot.repo.DeckRepository
-import com.timmay.tarot.repo.CardStore
-import com.timmay.tarot.domain.*
+import javax.inject.Inject
+
+@HiltViewModel
+class ReadingViewModel @Inject constructor(
+    private val spreadRepository: SpreadRepository,
+    private val deckRepository: DeckRepository,
+    private val interpreter: Interpreter
+) : ViewModel() {
 
 class ReadingViewModel: ViewModel() {
     sealed class Ui {
@@ -25,18 +36,11 @@ class ReadingViewModel: ViewModel() {
 
     fun start(spreadId: String) {
         viewModelScope.launch {
-            val spreads = SpreadRepository()
-            val spread = spreads.byId(spreadId)
-            val deckRepo = DeckRepository(CardStore())
+            _ui.value = Ui.Loading
+            val spread = spreadRepository.byId(spreadId)
             val seed = TarotRng.secureSeed()
-            val shuffled = deckRepo.shuffled(seed)
-
-            val allCards = CardStore().all().associateBy { it.id }
-            val dealt = shuffled.take(spread.positions.size).map { d ->
-                val card = allCards[d.cardId] ?: error("Card not found: " + d.cardId)
-                CardWithCard(card, d.isReversed)
-            }
-            val prose = Interpreter().compose(spread, dealt)
+            val dealt = deckRepository.draw(spread.positions.size, seed)
+            val prose = interpreter.compose(spread, dealt)
             _ui.value = Ui.Result(spread, dealt, prose)
         }
     }

@@ -11,14 +11,28 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SpreadPickerViewModel @Inject constructor(private val spreadRepository: SpreadRepository) : ViewModel() {
+class SpreadPickerViewModel @Inject constructor(
+    private val spreadRepository: SpreadRepository
+) : ViewModel() {
 
-    private val _spreads = MutableStateFlow<List<Spread>>(emptyList())
-    val spreads: StateFlow<List<Spread>> = _spreads
+    sealed interface UiState {
+        data object Loading : UiState
+        data class Ready(val spreads: List<Spread>) : UiState
+        data class Error(val message: String) : UiState
+    }
+
+    private val _ui = MutableStateFlow<UiState>(UiState.Loading)
+    val ui: StateFlow<UiState> = _ui
 
     fun fetchSpreads() {
         viewModelScope.launch {
-            _spreads.value = spreadRepository.all()
+            _ui.value = UiState.Loading
+            try {
+                val spreads = spreadRepository.all()
+                _ui.value = UiState.Ready(spreads)
+            } catch (error: Throwable) {
+                _ui.value = UiState.Error(error.message ?: "Unable to load spreads")
+            }
         }
     }
 }

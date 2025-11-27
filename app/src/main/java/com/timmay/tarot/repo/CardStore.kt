@@ -1,17 +1,38 @@
 package com.timmay.tarot.repo
 
 import com.timmay.tarot.domain.TarotCard
-import kotlinx.serialization.json.Json
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.decodeFromString
-import java.io.InputStream
+import kotlinx.serialization.json.Json
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class CardStore {
+@Singleton
+class CardStore @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
     private val json = Json { ignoreUnknownKeys = true }
-    fun all(): List<TarotCard> {
-        val stream: InputStream = CardStore::class.java.classLoader!!
-            .getResourceAsStream("assets/deck.json")
-            ?: error("deck.json not found")
-        val text = stream.reader().readText()
-        return json.decodeFromString(text)
+
+    @Volatile
+    private var cached: List<TarotCard>? = null
+
+    suspend fun all(): List<TarotCard> {
+        val existing = cached
+        if (existing != null) return existing
+        return withContext(Dispatchers.IO) {
+            cached ?: loadDeck().also { cached = it }
+        }
+    }
+
+    private fun loadDeck(): List<TarotCard> {
+        return context.assets.open(DECK_ASSET).bufferedReader().use { reader ->
+            json.decodeFromString<List<TarotCard>>(reader.readText())
+        }
+    }
+
+    companion object {
+        private const val DECK_ASSET = "deck.json"
     }
 }

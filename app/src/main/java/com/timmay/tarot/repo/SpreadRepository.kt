@@ -1,23 +1,44 @@
 package com.timmay.tarot.repo
 
+import android.content.Context
 import com.timmay.tarot.domain.Spread
-import com.timmay.tarot.domain.Position
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SpreadRepository {
-    fun all(): List<Spread> = listOf(
-        Spread("single", "Single Card", listOf(Position("Message"))),
-        Spread("three_card", "Past • Present • Future", listOf(
-            Position("Past"), Position("Present"), Position("Future")
-        )),
-        Spread("decision", "Two Paths", listOf(Position("Option A"), Position("Option B"))),
-        Spread("relationship", "Relationship (6)", listOf(
-            Position("You"), Position("Them"), Position("Dynamic"), Position("Obstacle"), Position("Advice"), Position("Outcome")
-        )),
-        Spread("celtic_cross", "Celtic Cross (10)", listOf(
-            Position("Significator"), Position("Crossing"), Position("Crowning"), Position("Root"),
-            Position("Past"), Position("Future"), Position("Self"), Position("Environment"),
-            Position("Hopes/Fears"), Position("Outcome")
-        ))
-    )
-    fun byId(id: String) = all().firstOrNull { it.id == id } ?: all()[1]
+@Singleton
+class SpreadRepository @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
+    private val json = Json { ignoreUnknownKeys = true }
+
+    @Volatile
+    private var cached: List<Spread>? = null
+
+    suspend fun all(): List<Spread> {
+        val existing = cached
+        if (existing != null) return existing
+        return withContext(Dispatchers.IO) {
+            cached ?: loadSpreads().also { cached = it }
+        }
+    }
+
+    suspend fun byId(id: String): Spread {
+        val spreads = all()
+        return spreads.firstOrNull { it.id == id } ?: spreads.first()
+    }
+
+    private fun loadSpreads(): List<Spread> {
+        return context.assets.open(SPREADS_ASSET).bufferedReader().use { reader ->
+            json.decodeFromString<List<Spread>>(reader.readText())
+        }
+    }
+
+    companion object {
+        private const val SPREADS_ASSET = "spreads.json"
+    }
 }

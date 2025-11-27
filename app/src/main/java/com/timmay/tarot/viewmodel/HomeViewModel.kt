@@ -3,36 +3,47 @@ package com.timmay.tarot.viewmodel
 import android.os.Build
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.timmay.tarot.domain.TarotCard
 import com.timmay.tarot.domain.TarotRng
-import com.timmay.tarot.repo.CardStore
+import com.timmay.tarot.repo.DeckRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.time.ZoneId
 import javax.inject.Inject
+import kotlin.random.Random
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val cardStore: CardStore) : ViewModel() {
+class HomeViewModel @Inject constructor(
+    private val deckRepository: DeckRepository
+) : ViewModel() {
 
-    private val _dailyCard = MutableStateFlow("…")
-    val dailyCard: StateFlow<String> = _dailyCard
+    sealed interface DailyCardState {
+        data object Loading : DailyCardState
+        data class Ready(val card: TarotCard, val isReversed: Boolean) : DailyCardState
+        data class Error(val message: String) : DailyCardState
+    }
+
+    private val _dailyCard = MutableStateFlow<DailyCardState>(DailyCardState.Loading)
+    val dailyCard: StateFlow<DailyCardState> = _dailyCard
 
     fun fetchDailyCard() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            viewModelScope.launch {
-                withContext(Dispatchers.IO) {
-                    val zone = ZoneId.systemDefault()
-                    val dailySeed = TarotRng.dailySeed(zone)
-                    val cards = cardStore.all()
-                    val idx = kotlin.random.Random(dailySeed).nextInt(cards.size)
-                    _dailyCard.value = cards[idx].name
-                }
+        viewModelScope.launch {
+            _dailyCard.value = DailyCardState.Loading
+            try {
+                val zone = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) ZoneId.systemDefault() else null
+                val seed = TarotRng.dailySeed(zone)
+                val card = deckRepository.pickDailyCard(seed)
+                val reversed = Random(seed xor ORIENTATION_SALT).nextBoolean()
+                _dailyCard.value = DailyCardState.Ready(card, reversed)
+            } catch (error: Throwable) {
+                _dailyCard.value = DailyCardState.Error(error.message ?: "Unable to draw a card")
             }
-        } else {
-            _dailyCard.value = "Feature not available on this device"
         }
+    }
+
+    companion object {
+        private const val ORIENTATION_SALT = 0x9E3779B97F4A7C15uL.toLong()
     }
 }

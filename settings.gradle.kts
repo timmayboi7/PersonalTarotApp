@@ -12,5 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "TarotReader"
+rootProject.name = "TarotReaderAlt"
 include(":app")
+

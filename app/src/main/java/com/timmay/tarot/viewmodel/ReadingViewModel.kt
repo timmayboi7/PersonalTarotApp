@@ -21,13 +21,14 @@ class ReadingViewModel @Inject constructor(
     private val interpreter: Interpreter
 ) : ViewModel() {
 
+class ReadingViewModel: ViewModel() {
     sealed class Ui {
-        data object Loading : Ui()
+        data object Loading: Ui()
         data class Result(
             val spread: Spread,
-            val cards: List<ReadingCard>,
+            val cards: List<CardWithCard>,
             val prose: String
-        ) : Ui()
+        ): Ui()
     }
 
     private val _ui = MutableStateFlow<Ui>(Ui.Loading)

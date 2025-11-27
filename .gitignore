@@ -1,27 +1,6 @@
-# Gradle
 .gradle/
-build/
-**/build/
-local.properties
-.gradle
-.gradle/*
-!gradle/wrapper/gradle-wrapper.jar
-.gradle/7.*/executionHistory/*
-.gradle/7.*/fileHashes/*
-.gradle/7.*/gc.properties
-
-# Android Studio
-.idea/
-*.iml
-captures/
-
-# OS cruft
+/local.properties
+/.idea/
+/build/
+app/build/
 .DS_Store
-Thumbs.db
-
-# Keystores
-*.jks
-*.keystore
-
-# Generated
-app/release/

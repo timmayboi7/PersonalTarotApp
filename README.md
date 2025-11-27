@@ -1,4 +1,4 @@
-# Tarot Reader Alt
+# Tarot Reader
 
 Alternate layout using Room plugin + KSP, DeckRepository pattern, and DrawnCard model.
 

@@ -27,3 +27,6 @@ class Interpreter @Inject constructor() {
         return (theme + lines.joinToString("\n")).trim()
     }
 }
+
+data class CardWithCard(val card: TarotCard, val isReversed: Boolean)
+

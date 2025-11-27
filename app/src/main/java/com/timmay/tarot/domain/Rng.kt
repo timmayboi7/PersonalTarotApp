@@ -1,6 +1,5 @@
 package com.timmay.tarot.domain
 
-import android.os.Build
 import java.security.SecureRandom
 import java.time.LocalDate
 import java.time.ZoneId
@@ -24,6 +23,6 @@ object TarotRng {
             dayKey.toLong() xor SALT
         }
     }
-
     fun random(seed: Long): Random = Random(seed)
 }
+

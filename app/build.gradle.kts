@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.timmay.tarot"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.timmay.tarot"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }

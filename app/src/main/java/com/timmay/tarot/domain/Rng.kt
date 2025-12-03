@@ -9,8 +9,7 @@ object TarotRng {
     fun secureSeed(): Long = SecureRandom().nextLong()
     fun dailySeed(zone: ZoneId): Long {
         val day = LocalDate.now(zone).toEpochDay()
-        return day xor 0x5A5A5A5AL
+        return day xor 0x7F7F7F7FL
     }
     fun random(seed: Long): Random = Random(seed)
 }
-

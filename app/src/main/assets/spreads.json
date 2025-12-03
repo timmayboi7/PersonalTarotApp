@@ -1,0 +1,62 @@
+[
+  {
+    "id": "single",
+    "name": "Single Card",
+    "positions": [
+      {
+        "label": "Message"
+      }
+    ]
+  },
+  {
+    "id": "three_card",
+    "name": "Past • Present • Future",
+    "positions": [
+      {
+        "label": "Past"
+      },
+      {
+        "label": "Present"
+      },
+      {
+        "label": "Future"
+      }
+    ]
+  },
+  {
+    "id": "celtic_cross",
+    "name": "Celtic Cross (10)",
+    "positions": [
+      {
+        "label": "Significator"
+      },
+      {
+        "label": "Crossing"
+      },
+      {
+        "label": "Crowning"
+      },
+      {
+        "label": "Root"
+      },
+      {
+        "label": "Past"
+      },
+      {
+        "label": "Future"
+      },
+      {
+        "label": "Self"
+      },
+      {
+        "label": "Environment"
+      },
+      {
+        "label": "Hopes/Fears"
+      },
+      {
+        "label": "Outcome"
+      }
+    ]
+  }
+]

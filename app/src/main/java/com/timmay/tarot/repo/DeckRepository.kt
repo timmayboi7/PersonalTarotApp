@@ -1,24 +1,32 @@
 package com.timmay.tarot.repo
 
-import com.timmay.tarot.domain.DrawnCard
-import com.timmay.tarot.domain.TarotRng
+import com.timmay.tarot.domain.ReadingCard
+import com.timmay.tarot.domain.TarotCard
+import javax.inject.Inject
+import javax.inject.Singleton
 import kotlin.random.Random
 
-class DeckRepository(
-    private val cardStore: CardStore = CardStore()
+@Singleton
+class DeckRepository @Inject constructor(
+    private val cardStore: CardStore
 ) {
-    fun shuffled(seed: Long, reversalRate: Double = 0.45): List<DrawnCard> {
-        val rng: Random = TarotRng.random(seed)
-        val deck = cardStore.all().toMutableList()
-        for (i in deck.lastIndex downTo 1) {
-            val j = rng.nextInt(i + 1)
-            val tmp = deck[i]
-            deck[i] = deck[j]
-            deck[j] = tmp
-        }
-        return deck.mapIndexed { idx, card ->
-            DrawnCard(cardId = card.id, isReversed = rng.nextDouble() < reversalRate, positionIndex = idx)
-        }
+    suspend fun draw(count: Int, seed: Long): List<ReadingCard> {
+        val cards = cardStore.all()
+        val deckRandom = Random(seed)
+        val reversedRandom = Random(seed xor REVERSED_SALT)
+        return cards
+            .shuffled(deckRandom)
+            .take(count)
+            .map { card -> ReadingCard(card, reversedRandom.nextBoolean()) }
+    }
+
+    suspend fun pickDailyCard(seed: Long): TarotCard {
+        val deck = cardStore.all()
+        val random = Random(seed)
+        return deck[random.nextInt(deck.size)]
+    }
+
+    companion object {
+        private const val REVERSED_SALT = 0x7F4A7C15uL.toLong()
     }
 }
-

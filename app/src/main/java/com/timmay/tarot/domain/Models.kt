@@ -2,7 +2,9 @@ package com.timmay.tarot.domain
 
 import kotlinx.serialization.Serializable
 
+@Serializable
 enum class Arcana { MAJOR, MINOR }
+@Serializable
 enum class Suit { WANDS, CUPS, SWORDS, PENTACLES }
 
 @Serializable
@@ -28,11 +30,3 @@ data class Spread(
     val name: String,
     val positions: List<Position>
 )
-
-@Serializable
-data class DrawnCard(
-    val cardId: String,
-    val isReversed: Boolean,
-    val positionIndex: Int
-)
-

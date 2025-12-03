@@ -9,7 +9,6 @@ import androidx.navigation.compose.rememberNavController
 import com.timmay.tarot.ui.screens.HomeScreen
 import com.timmay.tarot.ui.screens.SpreadPickerScreen
 import com.timmay.tarot.ui.screens.ReadingScreen
-import
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
@@ -24,4 +23,3 @@ fun TarotAppRoot() {
         }
     }
 }
-

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "617269089374",
+    "project_id": "tarotreader-e28f1",
+    "storage_bucket": "tarotreader-e28f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617269089374:android:158beece0219505ac910cf",
+        "android_client_info": {
+          "package_name": "com.timmay.tarot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXegKXUyBXcL_zzOzoiMVVMH0wBh10fGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

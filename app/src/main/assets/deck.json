@@ -1,114 +1,1640 @@
 [
   {
-    "id": "fool",
+    "id": "maj_00",
     "name": "The Fool",
     "arcana": "MAJOR",
-    "keywordsUpright": ["beginnings", "innocence", "free spirit"],
-    "keywordsReversed": ["hesitation", "recklessness", "doubt"],
-    "meaningUpright": "A leap of faith, optimism, and openness to the unknown.",
-    "meaningReversed": "Pause before jumping; gather information and ground yourself."
+    "suit": null,
+    "number": 0,
+    "keywordsUpright": [
+      "beginnings",
+      "innocence",
+      "leap of faith"
+    ],
+    "keywordsReversed": [
+      "recklessness",
+      "hesitation",
+      "naivety"
+    ],
+    "meaningUpright": "Step forward with trust and curiosity; the path forms as you walk it.",
+    "meaningReversed": "Pause before jumping; gather basics and avoid careless risks.",
+    "imageAsset": "cards/The Fool.png",
+    "dailyDescription": "Today, The Fool opens a door to new beginnings. A spontaneous offer, idea, or connection may appear, inviting you to trust the unknown and take a gentle leap of faith."
   },
   {
-    "id": "magician",
+    "id": "maj_01",
     "name": "The Magician",
     "arcana": "MAJOR",
-    "keywordsUpright": ["willpower", "manifestation", "skill"],
-    "keywordsReversed": ["misaligned goals", "scattered energy", "tricks"],
-    "meaningUpright": "Resources are in your hands—focus and make it real.",
-    "meaningReversed": "Check motives and clear distractions before proceeding."
+    "suit": null,
+    "number": 1,
+    "keywordsUpright": [
+      "manifestation",
+      "skill",
+      "focus"
+    ],
+    "keywordsReversed": [
+      "manipulation",
+      "scattered energy",
+      "untapped potential"
+    ],
+    "meaningUpright": "Use your tools with intent and turn ideas into action.",
+    "meaningReversed": "Your power leaks through distraction; concentrate or recalibrate.",
+    "imageAsset": "cards/The Magician.png",
+    "dailyDescription": "Today, The Magician highlights your power to shape events. Your words, choices, and focus carry extra weight, so channel them into a specific goal you want to bring to life."
   },
   {
-    "id": "priestess",
+    "id": "maj_02",
     "name": "The High Priestess",
     "arcana": "MAJOR",
-    "keywordsUpright": ["intuition", "mystery", "inner voice"],
-    "keywordsReversed": ["secrets", "blocked intuition", "withholding"],
-    "meaningUpright": "Listen to your inner knowing; the answer is within.",
-    "meaningReversed": "Something is hidden—pause and allow truths to surface."
+    "suit": null,
+    "number": 2,
+    "keywordsUpright": [
+      "intuition",
+      "mystery",
+      "inner voice"
+    ],
+    "keywordsReversed": [
+      "secrets",
+      "disconnection",
+      "surface thinking"
+    ],
+    "meaningUpright": "Trust your inner knowing and read between the lines.",
+    "meaningReversed": "You’re ignoring intuition; get quiet and listen deeper.",
+    "imageAsset": "cards/The High Priestess.png",
+    "dailyDescription": "Today, The High Priestess urges you to listen to your instincts. Hints, dreams, and subtle signals are guiding you, especially where facts feel unclear or people say less than they mean."
   },
   {
-    "id": "empress",
+    "id": "maj_03",
     "name": "The Empress",
     "arcana": "MAJOR",
-    "keywordsUpright": ["nurture", "abundance", "creativity"],
-    "keywordsReversed": ["creative block", "overgiving", "stagnation"],
-    "meaningUpright": "Growth and comfort bloom when you care for yourself and others.",
-    "meaningReversed": "Replenish yourself; create from fullness, not depletion."
+    "suit": null,
+    "number": 3,
+    "keywordsUpright": [
+      "abundance",
+      "nurture",
+      "creativity"
+    ],
+    "keywordsReversed": [
+      "blockage",
+      "over-giving",
+      "stagnation"
+    ],
+    "meaningUpright": "Grow what you love through care, pleasure, and patience.",
+    "meaningReversed": "Stop pouring from an empty cup; receive and restore.",
+    "imageAsset": "cards/The Empress.png",
+    "dailyDescription": "Today, The Empress brings fertile, nurturing energy. This is a strong day to care for your body, home, and creative projects, and to allow support, comfort, or affection to reach you."
   },
   {
-    "id": "emperor",
+    "id": "maj_04",
     "name": "The Emperor",
     "arcana": "MAJOR",
-    "keywordsUpright": ["structure", "authority", "order"],
-    "keywordsReversed": ["rigidity", "control", "imbalance"],
-    "meaningUpright": "Lead with clarity and boundaries; build a lasting foundation.",
-    "meaningReversed": "Flexibility is needed—release the grip to regain balance."
+    "suit": null,
+    "number": 4,
+    "keywordsUpright": [
+      "structure",
+      "authority",
+      "stability"
+    ],
+    "keywordsReversed": [
+      "rigidity",
+      "control issues",
+      "power struggle"
+    ],
+    "meaningUpright": "Create order with firm boundaries and clear strategy.",
+    "meaningReversed": "Loosen the grip; flexibility will strengthen your position.",
+    "imageAsset": "cards/The Emperor.png",
+    "dailyDescription": "Today, The Emperor asks you to take charge. You may be called to set boundaries, make a firm decision, or bring structure to a situation that has felt loose or chaotic."
   },
   {
-    "id": "hierophant",
+    "id": "maj_05",
     "name": "The Hierophant",
     "arcana": "MAJOR",
-    "keywordsUpright": ["tradition", "learning", "ritual"],
-    "keywordsReversed": ["dogma", "rebellion", "questioning"],
-    "meaningUpright": "Seek wisdom in trusted teachings and community.",
-    "meaningReversed": "Question stale rules; craft a path aligned with your values."
+    "suit": null,
+    "number": 5,
+    "keywordsUpright": [
+      "tradition",
+      "teaching",
+      "beliefs"
+    ],
+    "keywordsReversed": [
+      "nonconformity",
+      "questioning",
+      "dogma"
+    ],
+    "meaningUpright": "Lean on proven wisdom or a mentor to guide the process.",
+    "meaningReversed": "Challenge rigid rules and define your own path.",
+    "imageAsset": "cards/The Hierophant.png",
+    "dailyDescription": "Today, The Hierophant highlights tradition, systems, and guidance. Turn to trusted teachings, a mentor, or your own spiritual practices to navigate choices and find stability."
   },
   {
-    "id": "lovers",
+    "id": "maj_06",
     "name": "The Lovers",
     "arcana": "MAJOR",
-    "keywordsUpright": ["union", "alignment", "choice"],
-    "keywordsReversed": ["imbalance", "disharmony", "avoidance"],
-    "meaningUpright": "A heartfelt choice or partnership asks for honest alignment.",
-    "meaningReversed": "Reconnect to your values before making commitments."
+    "suit": null,
+    "number": 6,
+    "keywordsUpright": [
+      "union",
+      "choice",
+      "alignment"
+    ],
+    "keywordsReversed": [
+      "misalignment",
+      "indecision",
+      "disharmony"
+    ],
+    "meaningUpright": "Choose what aligns with your values and let love be the guide.",
+    "meaningReversed": "A split in priorities needs honesty and recalibration.",
+    "imageAsset": "cards/The Lovers.png",
+    "dailyDescription": "Today, The Lovers draws attention to relationships and key decisions. Follow what truly matches your values, whether in love, work, or personal commitments, and let honesty lead."
   },
   {
-    "id": "chariot",
+    "id": "maj_07",
     "name": "The Chariot",
     "arcana": "MAJOR",
-    "keywordsUpright": ["drive", "victory", "direction"],
-    "keywordsReversed": ["drift", "force", "misalignment"],
-    "meaningUpright": "Momentum builds when will and purpose move together.",
-    "meaningReversed": "Realign your course; forcing it only skids the wheels."
+    "suit": null,
+    "number": 7,
+    "keywordsUpright": [
+      "willpower",
+      "victory",
+      "direction"
+    ],
+    "keywordsReversed": [
+      "drift",
+      "force",
+      "loss of control"
+    ],
+    "meaningUpright": "Harness your focus and drive straight toward the goal.",
+    "meaningReversed": "Stop pushing blindly; realign your aim before advancing.",
+    "imageAsset": "cards/The Chariot.png",
+    "dailyDescription": "Today, The Chariot powers up your drive. Choose a clear direction and commit; your determination can carry you through obstacles if you stay focused rather than reactive."
   },
   {
-    "id": "sun",
-    "name": "The Sun",
+    "id": "maj_08",
+    "name": "Strength",
     "arcana": "MAJOR",
-    "keywordsUpright": ["joy", "clarity", "success"],
-    "keywordsReversed": ["doubt", "temporary clouds", "overexposure"],
-    "meaningUpright": "Warmth, visibility, and confidence shine on your path.",
-    "meaningReversed": "Step into the light gently; celebrate progress even if muted."
+    "suit": null,
+    "number": 8,
+    "keywordsUpright": [
+      "inner strength",
+      "compassion",
+      "courage"
+    ],
+    "keywordsReversed": [
+      "doubt",
+      "impatience",
+      "fear"
+    ],
+    "meaningUpright": "Gentle courage and self-trust overcome this challenge.",
+    "meaningReversed": "Fear is loud; answer it with patience and self-kindness.",
+    "imageAsset": "cards/Strength.png",
+    "dailyDescription": "Today, Strength reminds you that calm courage beats force. Challenges may arise, but meeting them with patience, compassion, and confidence will open the right doors."
   },
   {
-    "id": "moon",
+    "id": "maj_09",
+    "name": "The Hermit",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 9,
+    "keywordsUpright": [
+      "solitude",
+      "wisdom",
+      "introspection"
+    ],
+    "keywordsReversed": [
+      "isolation",
+      "avoidance",
+      "stalling"
+    ],
+    "meaningUpright": "Step back to see clearly; your lamp is inside you.",
+    "meaningReversed": "You’ve stayed alone too long; reengage with the world.",
+    "imageAsset": "cards/The Hermit.png",
+    "dailyDescription": "Today, The Hermit calls for quiet reflection. Stepping back from noise or social pull will help you see a situation more clearly and reconnect with your inner guidance."
+  },
+  {
+    "id": "maj_10",
+    "name": "Wheel of Fortune",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 10,
+    "keywordsUpright": [
+      "cycles",
+      "luck",
+      "turning point"
+    ],
+    "keywordsReversed": [
+      "resistance",
+      "stagnation",
+      "setbacks"
+    ],
+    "meaningUpright": "The wheel turns; adapt quickly and ride the shift.",
+    "meaningReversed": "Change stalls when you cling; loosen expectations.",
+    "imageAsset": "cards/Wheel of Fortune.png",
+    "dailyDescription": "Today, the Wheel of Fortune suggests a shift in momentum. Circumstances may change quickly, offering a twist of luck or a new direction if you stay open and adaptable."
+  },
+  {
+    "id": "maj_11",
+    "name": "Justice",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 11,
+    "keywordsUpright": [
+      "truth",
+      "fairness",
+      "accountability"
+    ],
+    "keywordsReversed": [
+      "bias",
+      "dishonesty",
+      "avoidance"
+    ],
+    "meaningUpright": "Act with integrity and balance; the facts matter.",
+    "meaningReversed": "Own your part and correct the imbalance.",
+    "imageAsset": "cards/Justice.png",
+    "dailyDescription": "Today, Justice brings focus to fairness and consequences. It is a strong day to make balanced decisions, sign agreements, or admit truths so that you can move forward cleanly."
+  },
+  {
+    "id": "maj_12",
+    "name": "The Hanged Man",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 12,
+    "keywordsUpright": [
+      "surrender",
+      "new perspective",
+      "pause"
+    ],
+    "keywordsReversed": [
+      "delay",
+      "stubbornness",
+      "limbo"
+    ],
+    "meaningUpright": "Let go and reframe; insight comes from the pause.",
+    "meaningReversed": "You’re stuck by choice; try another angle.",
+    "imageAsset": "cards/The Hanged Man.png",
+    "dailyDescription": "Today, The Hanged Man invites you to pause rather than push. A shift in perspective, not more effort, will reveal what needs to change or be released."
+  },
+  {
+    "id": "maj_13",
+    "name": "Death",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 13,
+    "keywordsUpright": [
+      "ending",
+      "transition",
+      "renewal"
+    ],
+    "keywordsReversed": [
+      "resistance",
+      "fear",
+      "clinging"
+    ],
+    "meaningUpright": "A chapter closes so a new one can begin; release and reset.",
+    "meaningReversed": "You’re holding a door that’s already shut; move on.",
+    "imageAsset": "cards/Death.png",
+    "dailyDescription": "Today, Death signals transformation. An old cycle, habit, or attachment is ready to end, making room for renewal if you are willing to let go of what has run its course."
+  },
+  {
+    "id": "maj_14",
+    "name": "Temperance",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 14,
+    "keywordsUpright": [
+      "balance",
+      "moderation",
+      "alchemy"
+    ],
+    "keywordsReversed": [
+      "excess",
+      "imbalance",
+      "overcorrection"
+    ],
+    "meaningUpright": "Blend opposites with patience and create harmony.",
+    "meaningReversed": "Dial it back; extremes are muddying the outcome.",
+    "imageAsset": "cards/Temperance.png",
+    "dailyDescription": "Today, Temperance encourages you to find the middle path. Blending different needs, opinions, or priorities with patience will create more harmony than pushing extremes."
+  },
+  {
+    "id": "maj_15",
+    "name": "The Devil",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 15,
+    "keywordsUpright": [
+      "attachment",
+      "temptation",
+      "shadow"
+    ],
+    "keywordsReversed": [
+      "release",
+      "awareness",
+      "detachment"
+    ],
+    "meaningUpright": "Notice where you’re hooked and why it feels good.",
+    "meaningReversed": "The spell breaks when you name it; choose freedom.",
+    "imageAsset": "cards/The Devil.png",
+    "dailyDescription": "Today, The Devil shines a light on habits, temptations, or patterns that keep you hooked. Awareness is high; you can see where you feel chained and take a step toward freedom."
+  },
+  {
+    "id": "maj_16",
+    "name": "The Tower",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 16,
+    "keywordsUpright": [
+      "upheaval",
+      "revelation",
+      "breakdown"
+    ],
+    "keywordsReversed": [
+      "averted disaster",
+      "denial",
+      "slow collapse"
+    ],
+    "meaningUpright": "False structures fall so truth can stand.",
+    "meaningReversed": "You’re delaying the inevitable; rebuild on honesty.",
+    "imageAsset": "cards/The Tower.png",
+    "dailyDescription": "Today, The Tower may bring sudden insight or disruption. Anything built on shaky foundations could crack, but this clears space to rebuild in a way that is more honest and strong."
+  },
+  {
+    "id": "maj_17",
+    "name": "The Star",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 17,
+    "keywordsUpright": [
+      "hope",
+      "healing",
+      "guidance"
+    ],
+    "keywordsReversed": [
+      "doubt",
+      "drain",
+      "cynicism"
+    ],
+    "meaningUpright": "Refill your spirit and follow the quiet light ahead.",
+    "meaningReversed": "Your hope needs tending; protect your energy.",
+    "imageAsset": "cards/The Star.png",
+    "dailyDescription": "Today, The Star offers calm, hopeful energy. Healing conversations, small acts of self-care, or creative inspiration can renew your spirit and gently guide your next steps."
+  },
+  {
+    "id": "maj_18",
     "name": "The Moon",
     "arcana": "MAJOR",
-    "keywordsUpright": ["dreams", "intuition", "cycles"],
-    "keywordsReversed": ["confusion", "fear", "hidden truths"],
-    "meaningUpright": "Move with the tide of intuition; not everything is linear.",
-    "meaningReversed": "Name the fear; clarity grows when you investigate the shadows."
+    "suit": null,
+    "number": 18,
+    "keywordsUpright": [
+      "intuition",
+      "illusion",
+      "dreams"
+    ],
+    "keywordsReversed": [
+      "clarity",
+      "truth emerging",
+      "release of fear"
+    ],
+    "meaningUpright": "Not all is as it seems; navigate by intuition, not panic.",
+    "meaningReversed": "Fog lifts; trust what your gut already knew.",
+    "imageAsset": "cards/The Moon.png",
+    "dailyDescription": "Today, The Moon heightens emotion and intuition. Facts may feel slippery, so notice your dreams, hunches, and subtle fears, and let your inner knowing guide you carefully."
   },
   {
-    "id": "ace_cups",
-    "name": "Ace of Cups",
+    "id": "maj_19",
+    "name": "The Sun",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 19,
+    "keywordsUpright": [
+      "joy",
+      "success",
+      "vitality"
+    ],
+    "keywordsReversed": [
+      "diminished joy",
+      "ego",
+      "temporary cloud"
+    ],
+    "meaningUpright": "Shine openly; momentum and clarity are on your side.",
+    "meaningReversed": "Reconnect to simple joys to restore momentum.",
+    "imageAsset": "cards/The Sun.png",
+    "dailyDescription": "Today, The Sun brightens your path. Confidence, clarity, and positive attention are easier to access, making this a good day to move ahead with plans or share your talents."
+  },
+  {
+    "id": "maj_20",
+    "name": "Judgement",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 20,
+    "keywordsUpright": [
+      "awakening",
+      "reckoning",
+      "renewal"
+    ],
+    "keywordsReversed": [
+      "self-judgment",
+      "stagnation",
+      "avoidance"
+    ],
+    "meaningUpright": "Answer the call to level up and live your truth.",
+    "meaningReversed": "Drop the self-critique; decide and move forward.",
+    "imageAsset": "cards/Judgement.png",
+    "dailyDescription": "Today, Judgement signals a wake-up call. You may feel pushed to make a final decision, forgive yourself, or step into a new level of truth about who you are and what you want."
+  },
+  {
+    "id": "maj_21",
+    "name": "The World",
+    "arcana": "MAJOR",
+    "suit": null,
+    "number": 21,
+    "keywordsUpright": [
+      "completion",
+      "integration",
+      "wholeness"
+    ],
+    "keywordsReversed": [
+      "almost there",
+      "loose ends",
+      "delay"
+    ],
+    "meaningUpright": "A cycle completes; celebrate and step into the next ring.",
+    "meaningReversed": "Close what’s unfinished so the door can truly open.",
+    "imageAsset": "cards/The World.png",
+    "dailyDescription": "Today, The World highlights completion and integration. A long phase, project, or pattern may be wrapping up, inviting you to recognize your growth and prepare for the next chapter."
+  },
+  {
+    "id": "wand_01",
+    "name": "Ace of Wands",
     "arcana": "MINOR",
-    "suit": "CUPS",
+    "suit": "WANDS",
     "number": 1,
-    "keywordsUpright": ["overflow", "love", "new feelings"],
-    "keywordsReversed": ["emotional block", "reserved", "self-focus"],
-    "meaningUpright": "A fresh wellspring of emotion and connection opens up.",
-    "meaningReversed": "Tend to your own cup before pouring out to others."
+    "keywordsUpright": [
+      "spark",
+      "initiative",
+      "inspiration"
+    ],
+    "keywordsReversed": [
+      "block",
+      "false start",
+      "doubt"
+    ],
+    "meaningUpright": "A new spark wants action; say yes and begin.",
+    "meaningReversed": "Energy is stuck; simplify and relight the match.",
+    "imageAsset": "cards/Ace of Wands.png",
+    "dailyDescription": "Today, the Ace of Wands ignites fresh passion. A new idea, project, or attraction could light up, asking you to take the first step while your enthusiasm is strong."
   },
   {
-    "id": "three_wands",
+    "id": "wand_02",
+    "name": "Two of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 2,
+    "keywordsUpright": [
+      "planning",
+      "scope",
+      "foresight"
+    ],
+    "keywordsReversed": [
+      "comfort zone",
+      "hesitation",
+      "narrow vision"
+    ],
+    "meaningUpright": "Map the path and choose a bolder direction.",
+    "meaningReversed": "Fear of expansion is the only wall in your way.",
+    "imageAsset": "cards/Two of Wands.png",
+    "dailyDescription": "Today, the Two of Wands asks you to look beyond your current limits. Planning, research, and bold vision around travel, work, or life direction are especially favored."
+  },
+  {
+    "id": "wand_03",
     "name": "Three of Wands",
     "arcana": "MINOR",
     "suit": "WANDS",
     "number": 3,
-    "keywordsUpright": ["expansion", "planning", "momentum"],
-    "keywordsReversed": ["delays", "playing small", "hesitation"],
-    "meaningUpright": "You can see the horizon—take the next bold step.",
-    "meaningReversed": "Break the stall by adjusting plans and trusting your vision."
+    "keywordsUpright": [
+      "progress",
+      "expansion",
+      "ships coming in"
+    ],
+    "keywordsReversed": [
+      "delays",
+      "limited growth",
+      "lack of support"
+    ],
+    "meaningUpright": "Your launch gains distance; keep looking ahead.",
+    "meaningReversed": "Widen your horizon or adjust the plan to move.",
+    "imageAsset": "cards/Three of Wands.png",
+    "dailyDescription": "Today, the Three of Wands highlights momentum and expansion. Efforts you have already set in motion may show signs of progress, encouraging you to keep thinking long-term."
+  },
+  {
+    "id": "wand_04",
+    "name": "Four of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 4,
+    "keywordsUpright": [
+      "celebration",
+      "home",
+      "milestone"
+    ],
+    "keywordsReversed": [
+      "instability",
+      "private joy",
+      "postponed event"
+    ],
+    "meaningUpright": "Mark the milestone and honor your foundation.",
+    "meaningReversed": "Create stability before the celebration.",
+    "imageAsset": "cards/Four of Wands.png",
+    "dailyDescription": "Today, the Four of Wands brings a sense of home, celebration, or achievement. It is a good day to enjoy loved ones, mark a milestone, or do something that stabilizes your base."
+  },
+  {
+    "id": "wand_05",
+    "name": "Five of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 5,
+    "keywordsUpright": [
+      "competition",
+      "conflict",
+      "testing"
+    ],
+    "keywordsReversed": [
+      "avoidance",
+      "resolution",
+      "inner conflict"
+    ],
+    "meaningUpright": "Healthy friction sharpens skills; keep it fair.",
+    "meaningReversed": "Step out of petty fights and realign on goals.",
+    "imageAsset": "cards/Five of Wands.png",
+    "dailyDescription": "Today, the Five of Wands stirs up competitive or conflicting energy. Expect differing opinions or minor clashes, but use them to clarify your position rather than to win at all costs."
+  },
+  {
+    "id": "wand_06",
+    "name": "Six of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 6,
+    "keywordsUpright": [
+      "victory",
+      "recognition",
+      "confidence"
+    ],
+    "keywordsReversed": [
+      "ego",
+      "doubt",
+      "private win"
+    ],
+    "meaningUpright": "You’re seen and supported; lead with humility.",
+    "meaningReversed": "Celebrate quietly and rebuild self-belief.",
+    "imageAsset": "cards/Six of Wands.png",
+    "dailyDescription": "Today, the Six of Wands brings recognition and confidence. A win, compliment, or sign of approval may arrive, reminding you that your efforts are visible and valued."
+  },
+  {
+    "id": "wand_07",
+    "name": "Seven of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 7,
+    "keywordsUpright": [
+      "defense",
+      "standing ground",
+      "courage"
+    ],
+    "keywordsReversed": [
+      "exhaustion",
+      "overwhelm",
+      "compromise"
+    ],
+    "meaningUpright": "Hold your position and protect your progress.",
+    "meaningReversed": "Pick your battles; not every hill is yours to die on.",
+    "imageAsset": "cards/Seven of Wands.png",
+    "dailyDescription": "Today, the Seven of Wands encourages you to stand your ground. You may have to protect your choices or boundaries, but doing so keeps your progress and self-respect intact."
+  },
+  {
+    "id": "wand_08",
+    "name": "Eight of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 8,
+    "keywordsUpright": [
+      "speed",
+      "movement",
+      "messages"
+    ],
+    "keywordsReversed": [
+      "delays",
+      "misfires",
+      "chaos"
+    ],
+    "meaningUpright": "Things accelerate; communicate clearly and act.",
+    "meaningReversed": "Slow the flurry; organize before sending.",
+    "imageAsset": "cards/Eight of Wands.png",
+    "dailyDescription": "Today, the Eight of Wands speeds things up. News, messages, or opportunities may arrive quickly, making this a strong day for direct communication and swift, focused action."
+  },
+  {
+    "id": "wand_09",
+    "name": "Nine of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 9,
+    "keywordsUpright": [
+      "resilience",
+      "grit",
+      "last push"
+    ],
+    "keywordsReversed": [
+      "burnout",
+      "defensiveness",
+      "giving up"
+    ],
+    "meaningUpright": "Protect your energy and finish the stretch.",
+    "meaningReversed": "Rest and reset boundaries before proceeding.",
+    "imageAsset": "cards/Nine of Wands.png",
+    "dailyDescription": "Today, the Nine of Wands spotlights resilience. You may feel tired but close to a breakthrough; protect your energy, reinforce boundaries, and take the final steps with care."
+  },
+  {
+    "id": "wand_10",
+    "name": "Ten of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 10,
+    "keywordsUpright": [
+      "burden",
+      "responsibility",
+      "overload"
+    ],
+    "keywordsReversed": [
+      "release",
+      "delegation",
+      "lighten load"
+    ],
+    "meaningUpright": "You’re carrying too much; consolidate or ask for help.",
+    "meaningReversed": "Put down what isn’t yours and streamline.",
+    "imageAsset": "cards/Ten of Wands.png",
+    "dailyDescription": "Today, the Ten of Wands shows where you feel overloaded. Notice which tasks or roles weigh most heavily and consider delegating, simplifying, or letting a few go."
+  },
+  {
+    "id": "wand_11",
+    "name": "Page of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 11,
+    "keywordsUpright": [
+      "exploration",
+      "play",
+      "news"
+    ],
+    "keywordsReversed": [
+      "restlessness",
+      "immaturity",
+      "fizzle"
+    ],
+    "meaningUpright": "Follow curiosity and try the idea in the wild.",
+    "meaningReversed": "Ground the hype with a small, real test.",
+    "imageAsset": "cards/Page of Wands.png",
+    "dailyDescription": "Today, the Page of Wands brings playful, exploratory fire. You may receive exciting news or feel a surge of curiosity that invites you to try something new and expressive."
+  },
+  {
+    "id": "wand_12",
+    "name": "Knight of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 12,
+    "keywordsUpright": [
+      "adventure",
+      "boldness",
+      "momentum"
+    ],
+    "keywordsReversed": [
+      "impulsiveness",
+      "inconsistency",
+      "burnout"
+    ],
+    "meaningUpright": "Move fast with purpose; channel your fire.",
+    "meaningReversed": "Aim first, then sprint; don’t torch the plan.",
+    "imageAsset": "cards/Knight of Wands.png",
+    "dailyDescription": "Today, the Knight of Wands fuels bold moves. Your courage and charisma are high, making it a strong time to pursue adventure or passion projects, as long as you keep a loose plan in mind."
+  },
+  {
+    "id": "wand_13",
+    "name": "Queen of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 13,
+    "keywordsUpright": [
+      "charisma",
+      "confidence",
+      "warmth"
+    ],
+    "keywordsReversed": [
+      "insecurity",
+      "jealousy",
+      "introversion"
+    ],
+    "meaningUpright": "Lead with magnetism and trust your creative fire.",
+    "meaningReversed": "Own your worth and let yourself be seen.",
+    "imageAsset": "cards/Queen of Wands.png",
+    "dailyDescription": "Today, the Queen of Wands highlights your magnetism. You can attract support, opportunities, or admirers by showing up confidently and letting your creative fire be seen."
+  },
+  {
+    "id": "wand_14",
+    "name": "King of Wands",
+    "arcana": "MINOR",
+    "suit": "WANDS",
+    "number": 14,
+    "keywordsUpright": [
+      "vision",
+      "leadership",
+      "influence"
+    ],
+    "keywordsReversed": [
+      "domineering",
+      "impulse",
+      "rigidity"
+    ],
+    "meaningUpright": "Set the vision and inspire action at scale.",
+    "meaningReversed": "Share the stage and guide, don’t steamroll.",
+    "imageAsset": "cards/King of Wands.png",
+    "dailyDescription": "Today, the King of Wands empowers you to lead with vision. Others may look to you for direction, so step into a confident, inspiring role without losing flexibility."
+  },
+  {
+    "id": "cup_01",
+    "name": "Ace of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 1,
+    "keywordsUpright": [
+      "new feelings",
+      "love",
+      "opening"
+    ],
+    "keywordsReversed": [
+      "emotional block",
+      "emptiness",
+      "holding back"
+    ],
+    "meaningUpright": "Open your heart; connection wants to flow in.",
+    "meaningReversed": "Tend your own cup before pouring for others.",
+    "imageAsset": "cards/Ace of Cups.png",
+    "dailyDescription": "Today, the Ace of Cups opens your heart space. New feelings, vulnerable conversations, or tender connections are favored, making this a beautiful day for emotional beginnings."
+  },
+  {
+    "id": "cup_02",
+    "name": "Two of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 2,
+    "keywordsUpright": [
+      "partnership",
+      "harmony",
+      "attraction"
+    ],
+    "keywordsReversed": [
+      "imbalance",
+      "misunderstanding",
+      "disconnection"
+    ],
+    "meaningUpright": "Mutual respect deepens into real union.",
+    "meaningReversed": "Address the mismatch and repair or release.",
+    "imageAsset": "cards/Two of Cups.png",
+    "dailyDescription": "Today, the Two of Cups emphasizes connection and mutual understanding. Romantic or platonic bonds can deepen through honest exchange, shared affection, or simple quality time."
+  },
+  {
+    "id": "cup_03",
+    "name": "Three of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 3,
+    "keywordsUpright": [
+      "community",
+      "celebration",
+      "support"
+    ],
+    "keywordsReversed": [
+      "overindulgence",
+      "gossip",
+      "isolation"
+    ],
+    "meaningUpright": "Gather your people and toast shared wins.",
+    "meaningReversed": "Choose nourishing connections over noise.",
+    "imageAsset": "cards/Three of Cups.png",
+    "dailyDescription": "Today, the Three of Cups highlights friendship and community. Social plans, shared laughter, or supportive group energy can lift your mood and remind you that you are not alone."
+  },
+  {
+    "id": "cup_04",
+    "name": "Four of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 4,
+    "keywordsUpright": [
+      "apathy",
+      "contemplation",
+      "discontent"
+    ],
+    "keywordsReversed": [
+      "reengagement",
+      "new interest",
+      "gratitude"
+    ],
+    "meaningUpright": "You’re withdrawn; look up and notice what’s offered.",
+    "meaningReversed": "Energy returns as you say yes to life again.",
+    "imageAsset": "cards/Four of Cups.png",
+    "dailyDescription": "Today, the Four of Cups reveals emotional flatness or boredom. A new opportunity or invitation may appear, but you will need to look up and engage to recognize its value."
+  },
+  {
+    "id": "cup_05",
+    "name": "Five of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 5,
+    "keywordsUpright": [
+      "loss",
+      "regret",
+      "mourning"
+    ],
+    "keywordsReversed": [
+      "acceptance",
+      "healing",
+      "perspective"
+    ],
+    "meaningUpright": "Honor the grief, then turn to what remains.",
+    "meaningReversed": "You’re ready to rebuild from what’s still true.",
+    "imageAsset": "cards/Five of Cups.png",
+    "dailyDescription": "Today, the Five of Cups brings attention to disappointment or regret. Feelings may surface, but shifting your gaze to what still remains can start a healing process."
+  },
+  {
+    "id": "cup_06",
+    "name": "Six of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 6,
+    "keywordsUpright": [
+      "nostalgia",
+      "kindness",
+      "innocence"
+    ],
+    "keywordsReversed": [
+      "living in the past",
+      "clinging",
+      "rose tint"
+    ],
+    "meaningUpright": "Sweet memories soften the present and heal.",
+    "meaningReversed": "Let the past inform, not imprison, your choices.",
+    "imageAsset": "cards/Six of Cups.png",
+    "dailyDescription": "Today, the Six of Cups softens your heart with nostalgia. A memory, familiar person, or old place may resurface, offering comfort and a reminder of how far you have come."
+  },
+  {
+    "id": "cup_07",
+    "name": "Seven of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 7,
+    "keywordsUpright": [
+      "choices",
+      "fantasy",
+      "temptation"
+    ],
+    "keywordsReversed": [
+      "clarity",
+      "priority",
+      "focus"
+    ],
+    "meaningUpright": "Too many options; decide with values not glitter.",
+    "meaningReversed": "You see through illusions; choose one path.",
+    "imageAsset": "cards/Seven of Cups.png",
+    "dailyDescription": "Today, the Seven of Cups surrounds you with options and fantasies. Daydream, but also choose one real priority to focus on so you do not scatter your energy."
+  },
+  {
+    "id": "cup_08",
+    "name": "Eight of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 8,
+    "keywordsUpright": [
+      "walking away",
+      "search",
+      "truth"
+    ],
+    "keywordsReversed": [
+      "fear of leaving",
+      "stuck",
+      "drift"
+    ],
+    "meaningUpright": "Leave what no longer nourishes and seek depth.",
+    "meaningReversed": "Avoiding departure prolongs the emptiness.",
+    "imageAsset": "cards/Eight of Cups.png",
+    "dailyDescription": "Today, the Eight of Cups suggests a quiet turning point. You may feel called to step away from something that no longer nourishes you in order to seek deeper truth and meaning."
+  },
+  {
+    "id": "cup_09",
+    "name": "Nine of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 9,
+    "keywordsUpright": [
+      "satisfaction",
+      "wish",
+      "gratitude"
+    ],
+    "keywordsReversed": [
+      "smugness",
+      "overindulgence",
+      "hollow win"
+    ],
+    "meaningUpright": "Enjoy the wish fulfilled and share the joy.",
+    "meaningReversed": "Seek deeper fulfillment beyond comfort.",
+    "imageAsset": "cards/Nine of Cups.png",
+    "dailyDescription": "Today, the Nine of Cups brings wish-fulfillment energy. A desire, big or small, may be granted, and pausing to feel gratitude can amplify the sense of emotional satisfaction."
+  },
+  {
+    "id": "cup_10",
+    "name": "Ten of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 10,
+    "keywordsUpright": [
+      "happiness",
+      "harmony",
+      "family"
+    ],
+    "keywordsReversed": [
+      "discord",
+      "expectations",
+      "surface peace"
+    ],
+    "meaningUpright": "Emotional contentment settles in; cherish it.",
+    "meaningReversed": "Align expectations with reality to restore peace.",
+    "imageAsset": "cards/Ten of Cups.png",
+    "dailyDescription": "Today, the Ten of Cups highlights emotional harmony. Family, chosen family, or close bonds can feel especially warm, making this a good day to savor love in all its forms."
+  },
+  {
+    "id": "cup_11",
+    "name": "Page of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 11,
+    "keywordsUpright": [
+      "openness",
+      "curiosity",
+      "messages"
+    ],
+    "keywordsReversed": [
+      "immaturity",
+      "oversensitivity",
+      "fantasy"
+    ],
+    "meaningUpright": "Stay open to surprise and let feelings teach you.",
+    "meaningReversed": "Ground your dreams; feel without flooding.",
+    "imageAsset": "cards/Page of Cups.png",
+    "dailyDescription": "Today, the Page of Cups brings gentle emotional surprises. A sweet message, crush, creative idea, or synchronicity could appear when you stay soft and open-hearted."
+  },
+  {
+    "id": "cup_12",
+    "name": "Knight of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 12,
+    "keywordsUpright": [
+      "romance",
+      "idealism",
+      "quest"
+    ],
+    "keywordsReversed": [
+      "escapism",
+      "moodiness",
+      "inconsistency"
+    ],
+    "meaningUpright": "Pursue the heartfelt vision with grace.",
+    "meaningReversed": "Balance feeling with follow-through.",
+    "imageAsset": "cards/Knight of Cups.png",
+    "dailyDescription": "Today, the Knight of Cups invites you to follow your heart. Romantic gestures, creative pursuits, or soulful conversations are favored when you move with sincerity and grace."
+  },
+  {
+    "id": "cup_13",
+    "name": "Queen of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 13,
+    "keywordsUpright": [
+      "compassion",
+      "intuition",
+      "calm"
+    ],
+    "keywordsReversed": [
+      "overwhelm",
+      "martyrdom",
+      "blocks"
+    ],
+    "meaningUpright": "Lead with empathy and inner listening.",
+    "meaningReversed": "Protect your boundaries and refill quietly.",
+    "imageAsset": "cards/Queen of Cups.png",
+    "dailyDescription": "Today, the Queen of Cups surrounds you with intuitive calm. You can be a soothing presence for others while also listening closely to your own emotional needs."
+  },
+  {
+    "id": "cup_14",
+    "name": "King of Cups",
+    "arcana": "MINOR",
+    "suit": "CUPS",
+    "number": 14,
+    "keywordsUpright": [
+      "emotional mastery",
+      "support",
+      "wisdom"
+    ],
+    "keywordsReversed": [
+      "suppression",
+      "manipulation",
+      "imbalance"
+    ],
+    "meaningUpright": "Hold steady waters and guide with heart.",
+    "meaningReversed": "Acknowledge feelings instead of controlling them.",
+    "imageAsset": "cards/King of Cups.png",
+    "dailyDescription": "Today, the King of Cups emphasizes emotional maturity. You may be called to stay steady amid others’ waves, offering wise support without losing your own inner balance."
+  },
+  {
+    "id": "sword_01",
+    "name": "Ace of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 1,
+    "keywordsUpright": [
+      "clarity",
+      "truth",
+      "breakthrough"
+    ],
+    "keywordsReversed": [
+      "confusion",
+      "miscommunication",
+      "overthinking"
+    ],
+    "meaningUpright": "Cut to the point; a sharp idea clears the fog.",
+    "meaningReversed": "Too many thoughts; simplify to find the signal.",
+    "imageAsset": "cards/Ace of Swords.png",
+    "dailyDescription": "Today, the Ace of Swords brings mental clarity. A key insight, decision, or conversation can slice through confusion if you are willing to speak and hear the truth."
+  },
+  {
+    "id": "sword_02",
+    "name": "Two of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 2,
+    "keywordsUpright": [
+      "stalemate",
+      "decision",
+      "balance"
+    ],
+    "keywordsReversed": [
+      "indecision",
+      "information needed",
+      "avoidance"
+    ],
+    "meaningUpright": "Weigh facts calmly and choose with balance.",
+    "meaningReversed": "Open your eyes to new data and decide.",
+    "imageAsset": "cards/Two of Swords.png",
+    "dailyDescription": "Today, the Two of Swords reflects a standstill or difficult choice. Taking time to gather information and listen to both head and heart will help you move out of stalemate."
+  },
+  {
+    "id": "sword_03",
+    "name": "Three of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 3,
+    "keywordsUpright": [
+      "heartbreak",
+      "truth",
+      "release"
+    ],
+    "keywordsReversed": [
+      "healing",
+      "forgiveness",
+      "recovery"
+    ],
+    "meaningUpright": "Pain clarifies what can’t continue as is.",
+    "meaningReversed": "Repair begins when you stop reopening wounds.",
+    "imageAsset": "cards/Three of Swords.png",
+    "dailyDescription": "Today, the Three of Swords may stir tender or painful truths. Acknowledging what hurts can be the first step toward release, healing, or necessary change."
+  },
+  {
+    "id": "sword_04",
+    "name": "Four of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 4,
+    "keywordsUpright": [
+      "rest",
+      "recovery",
+      "silence"
+    ],
+    "keywordsReversed": [
+      "restlessness",
+      "burnout",
+      "delay"
+    ],
+    "meaningUpright": "Step back and recharge for a clear mind.",
+    "meaningReversed": "You need real rest, not just distraction.",
+    "imageAsset": "cards/Four of Swords.png",
+    "dailyDescription": "Today, the Four of Swords urges you to slow down. Mental and physical rest will do more for your progress than pushing through fatigue or stress."
+  },
+  {
+    "id": "sword_05",
+    "name": "Five of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 5,
+    "keywordsUpright": [
+      "conflict",
+      "win at all costs",
+      "tension"
+    ],
+    "keywordsReversed": [
+      "resolution",
+      "amends",
+      "learning"
+    ],
+    "meaningUpright": "A hollow victory isn’t worth the fallout.",
+    "meaningReversed": "Repair the damage and choose wiser battles.",
+    "imageAsset": "cards/Five of Swords.png",
+    "dailyDescription": "Today, the Five of Swords warns of ego-driven conflicts. Choose carefully where you argue or push your point, and consider whether peace matters more than being right."
+  },
+  {
+    "id": "sword_06",
+    "name": "Six of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 6,
+    "keywordsUpright": [
+      "transition",
+      "moving on",
+      "calmer waters"
+    ],
+    "keywordsReversed": [
+      "stuck",
+      "unfinished business",
+      "relapse"
+    ],
+    "meaningUpright": "Leave turbulence behind and follow relief.",
+    "meaningReversed": "Tie loose ends so the crossing holds.",
+    "imageAsset": "cards/Six of Swords.png",
+    "dailyDescription": "Today, the Six of Swords highlights a mental or physical transition. You may feel ready to leave a stressful situation behind and move slowly toward calmer waters."
+  },
+  {
+    "id": "sword_07",
+    "name": "Seven of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 7,
+    "keywordsUpright": [
+      "strategy",
+      "secrecy",
+      "tactics"
+    ],
+    "keywordsReversed": [
+      "exposure",
+      "accountability",
+      "coming clean"
+    ],
+    "meaningUpright": "Work smart and discreetly to solve the puzzle.",
+    "meaningReversed": "Face the truth; transparency serves you now.",
+    "imageAsset": "cards/Seven of Swords.png",
+    "dailyDescription": "Today, the Seven of Swords invites careful strategy. You may need to move quietly, think several steps ahead, or examine where honesty and clarity are being tested."
+  },
+  {
+    "id": "sword_08",
+    "name": "Eight of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 8,
+    "keywordsUpright": [
+      "restriction",
+      "fear",
+      "mental trap"
+    ],
+    "keywordsReversed": [
+      "release",
+      "empowerment",
+      "new perspective"
+    ],
+    "meaningUpright": "Your thoughts bind you more than facts do.",
+    "meaningReversed": "You see the exit; take the first step out.",
+    "imageAsset": "cards/Eight of Swords.png",
+    "dailyDescription": "Today, the Eight of Swords shows where you feel stuck or limited. Notice how much of that comes from your own thoughts, and look for one small action that proves you have options."
+  },
+  {
+    "id": "sword_09",
+    "name": "Nine of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 9,
+    "keywordsUpright": [
+      "anxiety",
+      "nightmares",
+      "guilt"
+    ],
+    "keywordsReversed": [
+      "relief",
+      "help",
+      "reframing"
+    ],
+    "meaningUpright": "Worry spirals at night; speak it and seek support.",
+    "meaningReversed": "Perspective returns; practice gentle self-talk.",
+    "imageAsset": "cards/Nine of Swords.png",
+    "dailyDescription": "Today, the Nine of Swords highlights anxiety or overthinking. Sharing your worries with someone trustworthy or challenging your own fears can bring relief and perspective."
+  },
+  {
+    "id": "sword_10",
+    "name": "Ten of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 10,
+    "keywordsUpright": [
+      "end",
+      "collapse",
+      "finality"
+    ],
+    "keywordsReversed": [
+      "recovery",
+      "renewal",
+      "release"
+    ],
+    "meaningUpright": "This phase is done; accept the ending fully.",
+    "meaningReversed": "You’re rising; don’t carry the old story.",
+    "imageAsset": "cards/Ten of Swords.png",
+    "dailyDescription": "Today, the Ten of Swords marks a clear ending. A situation may feel done or unsustainable, but accepting this can free you to begin a more honest and healing chapter."
+  },
+  {
+    "id": "sword_11",
+    "name": "Page of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 11,
+    "keywordsUpright": [
+      "curiosity",
+      "ideas",
+      "alertness"
+    ],
+    "keywordsReversed": [
+      "gossip",
+      "haste",
+      "scattered"
+    ],
+    "meaningUpright": "Study, ask, and refine the concept.",
+    "meaningReversed": "Slow down and verify before speaking.",
+    "imageAsset": "cards/Page of Swords.png",
+    "dailyDescription": "Today, the Page of Swords sharpens your mind. Questions, research, and fresh ideas are highlighted, but think before you speak so curiosity does not turn into drama."
+  },
+  {
+    "id": "sword_12",
+    "name": "Knight of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 12,
+    "keywordsUpright": [
+      "action",
+      "directness",
+      "mission"
+    ],
+    "keywordsReversed": [
+      "reckless",
+      "tunnel vision",
+      "argumentative"
+    ],
+    "meaningUpright": "Move quickly with facts and purpose.",
+    "meaningReversed": "Temper speed with nuance and listening.",
+    "imageAsset": "cards/Knight of Swords.png",
+    "dailyDescription": "Today, the Knight of Swords speeds up mental and verbal energy. It is a powerful day to tackle tasks, speak up, or defend a cause, as long as you avoid unnecessary harshness."
+  },
+  {
+    "id": "sword_13",
+    "name": "Queen of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 13,
+    "keywordsUpright": [
+      "discernment",
+      "truth",
+      "boundaries"
+    ],
+    "keywordsReversed": [
+      "coldness",
+      "bitterness",
+      "overcritical"
+    ],
+    "meaningUpright": "Speak clearly and cut away the fluff.",
+    "meaningReversed": "Soften the edge; clarity doesn’t need cruelty.",
+    "imageAsset": "cards/Queen of Swords.png",
+    "dailyDescription": "Today, the Queen of Swords brings sharp discernment. You can see through confusion and express yourself clearly, making this ideal for honest conversations and firm boundaries."
+  },
+  {
+    "id": "sword_14",
+    "name": "King of Swords",
+    "arcana": "MINOR",
+    "suit": "SWORDS",
+    "number": 14,
+    "keywordsUpright": [
+      "logic",
+      "ethics",
+      "strategy"
+    ],
+    "keywordsReversed": [
+      "rigidity",
+      "abuse of power",
+      "bias"
+    ],
+    "meaningUpright": "Lead with reason and fair judgment.",
+    "meaningReversed": "Check your bias and invite other views.",
+    "imageAsset": "cards/King of Swords.png",
+    "dailyDescription": "Today, the King of Swords emphasizes clear thinking and integrity. Strategic planning, legal matters, or difficult decisions benefit from your ability to stay objective and fair."
+  },
+  {
+    "id": "pent_01",
+    "name": "Ace of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 1,
+    "keywordsUpright": [
+      "opportunity",
+      "seed",
+      "prosperity"
+    ],
+    "keywordsReversed": [
+      "missed chance",
+      "delay",
+      "scarcity"
+    ],
+    "meaningUpright": "A tangible door opens; plant and tend it.",
+    "meaningReversed": "Tidy foundations before investing energy.",
+    "imageAsset": "cards/Ace of Pentacles.png",
+    "dailyDescription": "Today, the Ace of Pentacles offers a concrete opportunity. A new job lead, project, purchase, or financial opening may appear, inviting you to plant a seed for future security."
+  },
+  {
+    "id": "pent_02",
+    "name": "Two of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 2,
+    "keywordsUpright": [
+      "balance",
+      "juggling",
+      "adaptability"
+    ],
+    "keywordsReversed": [
+      "overwhelm",
+      "disorganization",
+      "imbalance"
+    ],
+    "meaningUpright": "Prioritize and rhythm returns to the chaos.",
+    "meaningReversed": "Simplify commitments and pick what matters.",
+    "imageAsset": "cards/Two of Pentacles.png",
+    "dailyDescription": "Today, the Two of Pentacles highlights juggling act energy. You can handle multiple responsibilities if you stay flexible and prioritize, rather than trying to control every detail."
+  },
+  {
+    "id": "pent_03",
+    "name": "Three of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 3,
+    "keywordsUpright": [
+      "collaboration",
+      "craft",
+      "planning"
+    ],
+    "keywordsReversed": [
+      "misalignment",
+      "solo strain",
+      "sloppy work"
+    ],
+    "meaningUpright": "Build with others and elevate the quality.",
+    "meaningReversed": "Clarify roles or bring in the right help.",
+    "imageAsset": "cards/Three of Pentacles.png",
+    "dailyDescription": "Today, the Three of Pentacles favors teamwork and skill-building. Collaborations, feedback, or planning sessions can greatly improve the quality of what you are constructing."
+  },
+  {
+    "id": "pent_04",
+    "name": "Four of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 4,
+    "keywordsUpright": [
+      "security",
+      "holding",
+      "control"
+    ],
+    "keywordsReversed": [
+      "greed",
+      "fear",
+      "release"
+    ],
+    "meaningUpright": "Protect your base without choking growth.",
+    "meaningReversed": "Loosen your grip to let abundance move.",
+    "imageAsset": "cards/Four of Pentacles.png",
+    "dailyDescription": "Today, the Four of Pentacles puts money and security on your mind. Saving and protecting your resources is wise, but notice where fear of loss may limit growth or generosity."
+  },
+  {
+    "id": "pent_05",
+    "name": "Five of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 5,
+    "keywordsUpright": [
+      "hardship",
+      "exclusion",
+      "lack"
+    ],
+    "keywordsReversed": [
+      "aid",
+      "recovery",
+      "mindset shift"
+    ],
+    "meaningUpright": "Ask for help; warmth is closer than you think.",
+    "meaningReversed": "Support arrives as you let yourself be seen.",
+    "imageAsset": "cards/Five of Pentacles.png",
+    "dailyDescription": "Today, the Five of Pentacles may highlight financial, physical, or emotional scarcity. Reaching out for support or looking for resources you have overlooked can shift the story."
+  },
+  {
+    "id": "pent_06",
+    "name": "Six of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 6,
+    "keywordsUpright": [
+      "generosity",
+      "exchange",
+      "support"
+    ],
+    "keywordsReversed": [
+      "strings attached",
+      "imbalance",
+      "self-neglect"
+    ],
+    "meaningUpright": "Give and receive in fair measure and grace.",
+    "meaningReversed": "Check power dynamics and set clean terms.",
+    "imageAsset": "cards/Six of Pentacles.png",
+    "dailyDescription": "Today, the Six of Pentacles emphasizes fair give-and-take. You may be in a position to help someone or to accept assistance, and balance in that exchange is key."
+  },
+  {
+    "id": "pent_07",
+    "name": "Seven of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 7,
+    "keywordsUpright": [
+      "patience",
+      "assessment",
+      "slow growth"
+    ],
+    "keywordsReversed": [
+      "impatience",
+      "misplaced effort",
+      "pivot"
+    ],
+    "meaningUpright": "Evaluate results and keep nurturing the long game.",
+    "meaningReversed": "Redirect effort to what actually yields.",
+    "imageAsset": "cards/Seven of Pentacles.png",
+    "dailyDescription": "Today, the Seven of Pentacles invites you to review your progress. This is a good time to assess what is growing well, what is not, and where patience or adjustments are needed."
+  },
+  {
+    "id": "pent_08",
+    "name": "Eight of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 8,
+    "keywordsUpright": [
+      "skill",
+      "practice",
+      "craft mastery"
+    ],
+    "keywordsReversed": [
+      "monotony",
+      "corner-cutting",
+      "plateau"
+    ],
+    "meaningUpright": "Focused practice compounds into mastery.",
+    "meaningReversed": "Recommit to quality or refresh your approach.",
+    "imageAsset": "cards/Eight of Pentacles.png",
+    "dailyDescription": "Today, the Eight of Pentacles supports focused work. Repetition, learning, and careful attention to detail can bring you closer to mastery and tangible improvement."
+  },
+  {
+    "id": "pent_09",
+    "name": "Nine of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 9,
+    "keywordsUpright": [
+      "independence",
+      "comfort",
+      "results"
+    ],
+    "keywordsReversed": [
+      "overwork",
+      "status seeking",
+      "isolation"
+    ],
+    "meaningUpright": "Enjoy what you’ve built and own your capability.",
+    "meaningReversed": "Worth isn’t a trophy; invite true ease in.",
+    "imageAsset": "cards/Nine of Pentacles.png",
+    "dailyDescription": "Today, the Nine of Pentacles highlights self-sufficiency and reward. You may enjoy the fruits of your labor and feel proud of what you have built for yourself."
+  },
+  {
+    "id": "pent_10",
+    "name": "Ten of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 10,
+    "keywordsUpright": [
+      "legacy",
+      "wealth",
+      "stability"
+    ],
+    "keywordsReversed": [
+      "entitlement",
+      "short-termism",
+      "fracture"
+    ],
+    "meaningUpright": "Think long-term and build what lasts beyond you.",
+    "meaningReversed": "Fix the cracks behind the picture-perfect scene.",
+    "imageAsset": "cards/Ten of Pentacles.png",
+    "dailyDescription": "Today, the Ten of Pentacles emphasizes long-term security and legacy. Family resources, shared investments, or future planning are favored, especially when you think beyond quick gains."
+  },
+  {
+    "id": "pent_11",
+    "name": "Page of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 11,
+    "keywordsUpright": [
+      "student",
+      "offer",
+      "foundation"
+    ],
+    "keywordsReversed": [
+      "procrastination",
+      "shortcuts",
+      "aimlessness"
+    ],
+    "meaningUpright": "Start practical steps toward a tangible goal.",
+    "meaningReversed": "Make a plan and take the first real action.",
+    "imageAsset": "cards/Page of Pentacles.png",
+    "dailyDescription": "Today, the Page of Pentacles brings grounded curiosity. New learning, job offers, or small practical steps toward a goal are all favored, especially if you stay consistent."
+  },
+  {
+    "id": "pent_12",
+    "name": "Knight of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 12,
+    "keywordsUpright": [
+      "reliability",
+      "routine",
+      "steady work"
+    ],
+    "keywordsReversed": [
+      "stagnation",
+      "rigidity",
+      "boredom"
+    ],
+    "meaningUpright": "Slow, consistent effort wins this race.",
+    "meaningReversed": "Loosen the routine and adapt to progress.",
+    "imageAsset": "cards/Knight of Pentacles.png",
+    "dailyDescription": "Today, the Knight of Pentacles favors patient, steady progress. Sticking to your routines and responsibilities will gradually move you closer to your material or practical goals."
+  },
+  {
+    "id": "pent_13",
+    "name": "Queen of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 13,
+    "keywordsUpright": [
+      "nurture",
+      "stability",
+      "resourcefulness"
+    ],
+    "keywordsReversed": [
+      "self-neglect",
+      "imbalance",
+      "over-caretaking"
+    ],
+    "meaningUpright": "Care for body, home, and resources with grace.",
+    "meaningReversed": "Prioritize your own well-being and support.",
+    "imageAsset": "cards/Queen of Pentacles.png",
+    "dailyDescription": "Today, the Queen of Pentacles blends care and practicality. You can improve your comfort, finances, or home life by tending to details while also nurturing yourself and others."
+  },
+  {
+    "id": "pent_14",
+    "name": "King of Pentacles",
+    "arcana": "MINOR",
+    "suit": "PENTACLES",
+    "number": 14,
+    "keywordsUpright": [
+      "security",
+      "prosperity",
+      "management"
+    ],
+    "keywordsReversed": [
+      "greed",
+      "rigidity",
+      "short-sightedness"
+    ],
+    "meaningUpright": "Lead with patience and steward resources wisely.",
+    "meaningReversed": "Be generous and flexible to unlock growth.",
+    "imageAsset": "cards/King of Pentacles.png",
+    "dailyDescription": "Today, the King of Pentacles highlights stable leadership and material success. Decisions around money, business, or long-term security benefit from your grounded, patient approach."
   }
 ]

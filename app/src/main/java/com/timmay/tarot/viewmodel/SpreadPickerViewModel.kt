@@ -3,9 +3,10 @@ package com.timmay.tarot.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.timmay.tarot.domain.Spread
+import com.timmay.tarot.di.IoDispatcher
 import com.timmay.tarot.repo.SpreadStore
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -15,6 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SpreadPickerViewModel @Inject constructor(
     private val spreadStore: SpreadStore,
+    @IoDispatcher private val ioDispatcher: CoroutineDispatcher,
 ) : ViewModel() {
 
     sealed class Ui {
@@ -27,7 +29,7 @@ class SpreadPickerViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            withContext(Dispatchers.IO) {
+            withContext(ioDispatcher) {
                 val spreads = spreadStore.all()
                 _ui.value = Ui.Result(spreads)
             }

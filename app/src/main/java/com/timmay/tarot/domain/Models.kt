@@ -18,7 +18,13 @@ data class TarotCard(
     val keywordsReversed: List<String> = emptyList(),
     val meaningUpright: String = "",
     val meaningReversed: String = "",
-    val imageAsset: String = ""
+    val imageAsset: String = "",
+    val dailyDescription: String = ""
+)
+
+data class ReadingCard(
+    val card: TarotCard,
+    val isReversed: Boolean
 )
 
 @Serializable

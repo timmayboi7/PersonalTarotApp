@@ -1,18 +1,23 @@
 package com.timmay.tarot.repo
 
-import android.content.res.AssetManager
-import com.timmay.tarot.TarotApp
 import com.timmay.tarot.domain.TarotCard
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
+import java.io.InputStream
+import javax.inject.Inject
+import javax.inject.Named
+import javax.inject.Singleton
 
-class CardStore {
-    private val json = Json { ignoreUnknownKeys = true }
-    fun all(): List<TarotCard> {
-        val assets: AssetManager = TarotApp.instance.assets
-        assets.open("deck.json").use { stream ->
-            val text = stream.reader().readText()
-            return json.decodeFromString(text)
-        }
+@Singleton
+class CardStore @Inject constructor(
+    @Named("deckStream") stream: InputStream
+) {
+    private val cards: List<TarotCard>
+
+    init {
+        val json = Json { ignoreUnknownKeys = true }
+        val text = stream.bufferedReader().use { it.readText() }
+        cards = json.decodeFromString(text)
     }
+
+    fun all(): List<TarotCard> = cards
 }

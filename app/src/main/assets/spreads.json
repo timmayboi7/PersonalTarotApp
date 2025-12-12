@@ -24,6 +24,46 @@
     ]
   },
   {
+    "id": "yes_no_maybe",
+    "name": "Yes • No • Maybe",
+    "positions": [
+      { "label": "Yes" },
+      { "label": "No" },
+      { "label": "Maybe" }
+    ]
+  },
+  {
+    "id": "mind_body_spirit",
+    "name": "Mind • Body • Spirit",
+    "positions": [
+      { "label": "Mind" },
+      { "label": "Body" },
+      { "label": "Spirit" }
+    ]
+  },
+  {
+    "id": "cross_five",
+    "name": "Cross (5)",
+    "positions": [
+      { "label": "Center" },
+      { "label": "North" },
+      { "label": "East" },
+      { "label": "South" },
+      { "label": "West" }
+    ]
+  },
+  {
+    "id": "rectangle_five",
+    "name": "Rectangle (5)",
+    "positions": [
+      { "label": "North" },
+      { "label": "East" },
+      { "label": "South" },
+      { "label": "West" },
+      { "label": "Center" }
+    ]
+  },
+  {
     "id": "celtic_cross",
     "name": "Celtic Cross (10)",
     "positions": [
@@ -57,6 +97,32 @@
       {
         "label": "Outcome"
       }
+    ]
+  },
+  {
+    "id": "compatibility_h",
+    "name": "Compatibility (H)",
+    "positions": [
+      { "label": "You" },
+      { "label": "Partner" },
+      { "label": "Bridge" },
+      { "label": "Challenge" },
+      { "label": "Alignment" },
+      { "label": "Lesson" },
+      { "label": "Outcome" }
+    ]
+  },
+  {
+    "id": "horseshoe",
+    "name": "Horseshoe (7)",
+    "positions": [
+      { "label": "Past" },
+      { "label": "Present" },
+      { "label": "Future" },
+      { "label": "Advice" },
+      { "label": "External" },
+      { "label": "Hopes/Fears" },
+      { "label": "Outcome" }
     ]
   }
 ]

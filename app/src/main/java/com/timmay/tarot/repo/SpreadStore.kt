@@ -1,17 +1,25 @@
 package com.timmay.tarot.repo
 
-import com.timmay.tarot.TarotApp
 import com.timmay.tarot.domain.Spread
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import java.io.InputStream
+import javax.inject.Inject
+import javax.inject.Named
+import javax.inject.Singleton
 
-class SpreadStore {
+
+@Singleton
+class SpreadStore @Inject constructor(
+    @Named("spreadsStream") stream: InputStream
+) {
     private val json = Json { ignoreUnknownKeys = true }
+    private val spreads: List<Spread>
 
-    fun all(): List<Spread> {
-        val stream: InputStream = TarotApp.instance.assets.open("spreads.json")
+    init {
         val text = stream.bufferedReader().use { it.readText() }
-        return json.decodeFromString(text)
+        spreads = json.decodeFromString(text)
     }
+
+    fun all(): List<Spread> = spreads
 }

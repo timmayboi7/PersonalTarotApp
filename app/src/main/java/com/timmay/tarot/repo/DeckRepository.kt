@@ -2,9 +2,9 @@ package com.timmay.tarot.repo
 
 import com.timmay.tarot.domain.ReadingCard
 import com.timmay.tarot.domain.TarotCard
+import java.util.Random
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.random.Random
 
 @Singleton
 class DeckRepository @Inject constructor(
@@ -27,6 +27,6 @@ class DeckRepository @Inject constructor(
     }
 
     companion object {
-        private const val REVERSED_SALT = 0x7F4A7C15uL.toLong()
+        private const val REVERSED_SALT = 0x7F4A7C15L
     }
 }

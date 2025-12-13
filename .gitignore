@@ -4,3 +4,7 @@
 /build/
 app/build/
 .DS_Store
+
+# Signing key
+/keystore.properties
+*.jks

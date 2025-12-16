@@ -15,4 +15,3 @@ class TarotApp : Application() {
             private set
     }
 }
-

@@ -50,7 +50,7 @@ private val MaellenFamily = FontFamily(Font(R.font.maellen_e9j06))
 fun TarotGenieSplashFlip(
     modifier: Modifier = Modifier,
     title: String = "Personal Tarot Reader",
-    cardResId: Int = R.drawable.tarot_card,
+    cardResId: Int = R.mipmap.tarot_card,
     onFinished: () -> Unit
 ) {
     val scope = rememberCoroutineScope()

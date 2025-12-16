@@ -6,11 +6,12 @@ import java.util.Random
 import javax.inject.Inject
 import javax.inject.Singleton
 
+@Suppress("unused")
 @Singleton
 class DeckRepository @Inject constructor(
     private val cardStore: CardStore
 ) {
-    suspend fun draw(count: Int, seed: Long): List<ReadingCard> {
+    fun draw(count: Int, seed: Long): List<ReadingCard> {
         val cards = cardStore.all()
         val deckRandom = Random(seed)
         val reversedRandom = Random(seed xor REVERSED_SALT)
@@ -20,7 +21,7 @@ class DeckRepository @Inject constructor(
             .map { card -> ReadingCard(card, reversedRandom.nextBoolean()) }
     }
 
-    suspend fun pickDailyCard(seed: Long): TarotCard {
+    fun pickDailyCard(seed: Long): TarotCard {
         val deck = cardStore.all()
         val random = Random(seed)
         return deck[random.nextInt(deck.size)]

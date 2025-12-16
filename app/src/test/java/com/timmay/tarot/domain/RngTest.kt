@@ -4,7 +4,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.time.ZoneId
 
-@Suppress("unused")
 class RngTest {
     @Test
     fun `daily seed is consistent`() {

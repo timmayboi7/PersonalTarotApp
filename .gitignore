@@ -5,6 +5,9 @@
 app/build/
 .DS_Store
 
+google-services.json
 # Signing key
 /keystore.properties
 *.jks
+enkey/caches/9.2.1/kotlin-dsl/accessors/22e2783c71c5c2771cc67061e86cf78a/workspace/classes/org/gradle/kotlin/dsl
+enkey/caches/9.2.1/kotlin-dsl/accessors/22e2783c71c5c2771cc67061e86cf78a/workspace/sources/org/gradle/kotlin/dsl

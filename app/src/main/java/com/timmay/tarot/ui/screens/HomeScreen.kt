@@ -99,6 +99,13 @@ fun HomeScreen(
             ) {
                 Text(text = "Start a reading")
             }
+            OutlinedButton(
+                onClick = { navController.navigate("account") },
+                shape = RoundedCornerShape(14.dp),
+                modifier = Modifier.fillMaxWidth(0.82f)
+            ) {
+                Text(text = "Account & preferences")
+            }
         }
     }
 

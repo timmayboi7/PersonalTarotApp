@@ -1,7 +1,10 @@
 package com.timmay.tarot.ui.screens
 
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,14 +15,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Card
@@ -34,17 +32,18 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.input.pointer.consumePositionChange
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
@@ -52,8 +51,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.timmay.tarot.domain.Spread
-import com.timmay.tarot.ui.theme.Fog
 import com.timmay.tarot.ui.theme.DeepNavy
+import com.timmay.tarot.ui.theme.Fog
 import com.timmay.tarot.ui.theme.Gold
 import com.timmay.tarot.ui.theme.Midnight
 import com.timmay.tarot.viewmodel.SpreadPickerViewModel
@@ -176,7 +175,7 @@ private fun deckDefinitions(): List<DeckDefinition> = listOf(
         faceLabel = "3-Card",
         subtitle = "Quick clarity in threes",
         accent = Fog,
-        spreadIds = listOf("three_card", "yes_no_maybe", "mind_body_spirit")
+        spreadIds = listOf("three_card", "three_card_love", "yes_no_maybe", "mind_body_spirit")
     ),
     DeckDefinition(
         id = "five_deck",
@@ -190,7 +189,7 @@ private fun deckDefinitions(): List<DeckDefinition> = listOf(
         faceLabel = "Advanced",
         subtitle = "Deep spreads for bigger stories",
         accent = Color(0xFFEFA4C6),
-        spreadIds = listOf("celtic_cross", "compatibility_h", "horseshoe")
+        spreadIds = listOf("celtic_cross", "compatibility_h", "horseshoe", "astrological_twelve")
     )
 )
 
@@ -259,12 +258,12 @@ private fun SpreadCarousel(
     accent: Color,
     onOpenSpread: (Spread) -> Unit
 ) {
-    val activeIndex = remember { mutableStateOf(spreads.size / 2) }
+    val activeIndex = remember { mutableIntStateOf(spreads.size / 2) }
     val baseOffset = 110.dp
     val baseRotation = 10f
     val baseHeight = 330.dp
     val density = LocalDensity.current
-    var dragPx by remember { mutableStateOf(0f) }
+    var dragPx by remember { mutableFloatStateOf(0f) }
     val dragThreshold = 80f
 
     Column(
@@ -284,8 +283,8 @@ private fun SpreadCarousel(
                         },
                         onDragEnd = {
                             when {
-                                dragPx > dragThreshold -> activeIndex.value = (activeIndex.value - 1).coerceAtLeast(0)
-                                dragPx < -dragThreshold -> activeIndex.value = (activeIndex.value + 1).coerceAtMost(spreads.lastIndex)
+                                dragPx > dragThreshold -> activeIndex.intValue = (activeIndex.intValue - 1).coerceAtLeast(0)
+                                dragPx < -dragThreshold -> activeIndex.intValue = (activeIndex.intValue + 1).coerceAtMost(spreads.lastIndex)
                             }
                             dragPx = 0f
                         },
@@ -295,7 +294,7 @@ private fun SpreadCarousel(
             contentAlignment = Alignment.Center
         ) {
             spreads.forEachIndexed { index, spread ->
-                val delta = index - activeIndex.value
+                val delta = index - activeIndex.intValue
                 val distance = abs(delta)
                 val dragDp = with(density) { dragPx.toDp() }
                 val targetOffset = baseOffset * delta + dragDp * 0.35f
@@ -316,7 +315,7 @@ private fun SpreadCarousel(
                         if (delta == 0) {
                             onOpenSpread(spread)
                         } else {
-                            activeIndex.value = index
+                            activeIndex.intValue = index
                         }
                     },
                     colors = CardDefaults.cardColors(containerColor = Color(0xFF161F2A)),
@@ -357,7 +356,7 @@ private fun SpreadCarousel(
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             Card(
-                onClick = { activeIndex.value = (activeIndex.value - 1).coerceAtLeast(0) },
+                onClick = { activeIndex.intValue = (activeIndex.intValue - 1).coerceAtLeast(0) },
                 colors = CardDefaults.cardColors(containerColor = Color(0xFF223040)),
                 shape = RoundedCornerShape(10.dp),
                 elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
@@ -365,7 +364,7 @@ private fun SpreadCarousel(
                 Text("<", modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp), color = accent)
             }
             Card(
-                onClick = { activeIndex.value = (activeIndex.value + 1).coerceAtMost(spreads.lastIndex) },
+                onClick = { activeIndex.intValue = (activeIndex.intValue + 1).coerceAtMost(spreads.lastIndex) },
                 colors = CardDefaults.cardColors(containerColor = Color(0xFF223040)),
                 shape = RoundedCornerShape(10.dp),
                 elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)

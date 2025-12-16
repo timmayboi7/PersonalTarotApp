@@ -24,6 +24,15 @@
     ]
   },
   {
+    "id": "three_card_love",
+    "name": "Three-Card Love",
+    "positions": [
+      { "label": "Individual Energies" },
+      { "label": "Common Base" },
+      { "label": "Bond/Connection" }
+    ]
+  },
+  {
     "id": "yes_no_maybe",
     "name": "Yes • No • Maybe",
     "positions": [
@@ -43,24 +52,24 @@
   },
   {
     "id": "cross_five",
-    "name": "Cross (5)",
+    "name": "Five-Card Cross",
     "positions": [
-      { "label": "Center" },
-      { "label": "North" },
-      { "label": "East" },
-      { "label": "South" },
-      { "label": "West" }
+      { "label": "Past" },
+      { "label": "Present" },
+      { "label": "Future" },
+      { "label": "Root Cause" },
+      { "label": "Potential" }
     ]
   },
   {
     "id": "rectangle_five",
-    "name": "Rectangle (5)",
+    "name": "Five-Card Rectangle",
     "positions": [
-      { "label": "North" },
-      { "label": "East" },
-      { "label": "South" },
-      { "label": "West" },
-      { "label": "Center" }
+      { "label": "Theme" },
+      { "label": "Fear/Block" },
+      { "label": "Desire" },
+      { "label": "Conflict" },
+      { "label": "Outside Perspective" }
     ]
   },
   {
@@ -103,13 +112,13 @@
     "id": "compatibility_h",
     "name": "Compatibility (H)",
     "positions": [
-      { "label": "You" },
-      { "label": "Partner" },
-      { "label": "Bridge" },
-      { "label": "Challenge" },
-      { "label": "Alignment" },
-      { "label": "Lesson" },
-      { "label": "Outcome" }
+      { "label": "You — Mind" },
+      { "label": "You — Heart" },
+      { "label": "You — Root/Passion" },
+      { "label": "Bond Between" },
+      { "label": "Partner — Mind" },
+      { "label": "Partner — Heart" },
+      { "label": "Partner — Root/Passion" }
     ]
   },
   {
@@ -123,6 +132,24 @@
       { "label": "External" },
       { "label": "Hopes/Fears" },
       { "label": "Outcome" }
+    ]
+  },
+  {
+    "id": "astrological_twelve",
+    "name": "Astrological (12)",
+    "positions": [
+      { "label": "Aries" },
+      { "label": "Taurus" },
+      { "label": "Gemini" },
+      { "label": "Cancer" },
+      { "label": "Leo" },
+      { "label": "Virgo" },
+      { "label": "Libra" },
+      { "label": "Scorpio" },
+      { "label": "Sagittarius" },
+      { "label": "Capricorn" },
+      { "label": "Aquarius" },
+      { "label": "Pisces" }
     ]
   }
 ]

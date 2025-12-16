@@ -5,6 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class Arcana { MAJOR, MINOR }
 @Serializable
+@Suppress("unused")
 enum class Suit { WANDS, CUPS, SWORDS, PENTACLES }
 
 @Serializable
@@ -25,6 +26,19 @@ data class TarotCard(
 data class ReadingCard(
     val card: TarotCard,
     val isReversed: Boolean
+)
+
+data class UserAccount(
+    val uid: String = "",
+    val displayName: String = "",
+    val email: String = "",
+    val photoUrl: String = ""
+)
+
+data class Profile(
+    val displayName: String = "",
+    val email: String = "",
+    val marketingOptIn: Boolean = false
 )
 
 @Serializable

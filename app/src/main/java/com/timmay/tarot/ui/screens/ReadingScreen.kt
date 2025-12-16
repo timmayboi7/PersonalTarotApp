@@ -35,7 +35,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -57,7 +56,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.ImageLoader
 import coil.compose.AsyncImage
 import coil.decode.SvgDecoder
-import com.timmay.tarot.R
 import com.timmay.tarot.ui.theme.DeepNavy
 import com.timmay.tarot.ui.theme.Gold
 import com.timmay.tarot.ui.theme.Midnight
@@ -127,12 +125,13 @@ private fun ReadingContent(
                 val onExpand: (Int) -> Unit = { expandedIndex.value = it }
                 when (state.spread.id) {
                     "single" -> SingleCardLayout(state, onReveal, onExpand)
-                    "three_card", "yes_no_maybe", "mind_body_spirit" -> ThreeCardLayout(state, onReveal, onExpand)
+                    "three_card", "three_card_love", "yes_no_maybe", "mind_body_spirit" -> ThreeCardLayout(state, onReveal, onExpand)
                     "cross_five" -> CrossFiveLayout(state, onReveal, onExpand)
                     "rectangle_five" -> RectangleFiveLayout(state, onReveal, onExpand)
                     "celtic_cross" -> CelticCrossLayout(state, onReveal, onExpand)
                     "horseshoe" -> HorseshoeLayout(state, onReveal, onExpand)
                     "compatibility_h" -> CompatibilityHLayout(state, onReveal, onExpand)
+                    "astrological_twelve" -> AstrologicalLayout(state, onReveal, onExpand)
                     else -> HorizontalListLayout(state, onReveal, onExpand)
                 }
             }
@@ -228,7 +227,7 @@ private fun CrossFiveLayout(
     onReveal: (Int) -> Unit,
     onExpand: (Int) -> Unit
 ) {
-    // Expected order: Center, North, East, South, West
+    // Expected order: Past, Present, Future, Root Cause, Potential (top)
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -236,11 +235,11 @@ private fun CrossFiveLayout(
         contentAlignment = Alignment.Center
     ) {
         val offsets = listOf(
-            0.dp to 0.dp,      // Center
-            0.dp to (-140).dp, // North
-            150.dp to 0.dp,    // East
-            0.dp to 140.dp,    // South
-            (-150).dp to 0.dp  // West
+            (-150).dp to 0.dp,   // Past (left)
+            0.dp to 0.dp,        // Present (center)
+            150.dp to 0.dp,      // Future (right)
+            0.dp to 140.dp,      // Root Cause (below)
+            0.dp to (-140).dp    // Potential (above)
         )
         offsets.forEachIndexed { idx, (x, y) ->
             CardSlot(
@@ -260,7 +259,7 @@ private fun RectangleFiveLayout(
     onReveal: (Int) -> Unit,
     onExpand: (Int) -> Unit
 ) {
-    // Expected order: Upper Left, Lower Left, Center, Upper Right, Lower Right
+    // Expected order: Theme (center), Fear/Block (top), Desire (right), Conflict (bottom), Outside Perspective (left)
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -268,11 +267,11 @@ private fun RectangleFiveLayout(
         contentAlignment = Alignment.Center
     ) {
         val offsets = listOf(
-            (-140).dp to (-120).dp, // Upper Left
-            (-140).dp to (80).dp,   // Lower Left
-            0.dp to 0.dp,           // Center
-            (140).dp to (-120).dp,  // Upper Right
-            (140).dp to (80).dp     // Lower Right
+            0.dp to 0.dp,            // Theme
+            0.dp to (-140).dp,       // Fear/Block (top)
+            160.dp to 0.dp,          // Desire (right)
+            0.dp to 140.dp,          // Conflict (bottom)
+            (-160).dp to 0.dp        // Outside Perspective (left)
         )
         offsets.forEachIndexed { idx, (x, y) ->
             CardSlot(
@@ -294,13 +293,13 @@ private fun HorseshoeLayout(
 ) {
     // 7-card arc: Past, Present, Future, Advice, External, Hopes/Fears, Outcome
     val positions = listOf(
-        (-180).dp to 90.dp,
-        (-120).dp to 40.dp,
-        (-60).dp to 0.dp,
-        0.dp to (-20).dp,
-        60.dp to 0.dp,
-        120.dp to 40.dp,
-        180.dp to 90.dp
+        (-180).dp to (-80).dp, // Card 1 - upper left
+        (-130).dp to 20.dp,    // Card 2
+        (-80).dp to 100.dp,    // Card 3 - bottom of the curve
+        0.dp to 130.dp,        // Card 4 - bottom middle
+        80.dp to 100.dp,       // Card 5
+        130.dp to 20.dp,       // Card 6
+        180.dp to (-80).dp     // Card 7 - upper right
     )
     Box(
         modifier = Modifier
@@ -321,12 +320,51 @@ private fun HorseshoeLayout(
 }
 
 @Composable
+private fun AstrologicalLayout(
+    state: ReadingViewModel.Ui.Result,
+    onReveal: (Int) -> Unit,
+    onExpand: (Int) -> Unit
+) {
+    // 12-card circle for zodiac signs, starting at top and moving clockwise
+    val offsets = listOf(
+        0.dp to (-200).dp,     // Aries
+        100.dp to (-170).dp,   // Taurus
+        170.dp to (-100).dp,   // Gemini
+        200.dp to 0.dp,        // Cancer
+        170.dp to 100.dp,      // Leo
+        100.dp to 170.dp,      // Virgo
+        0.dp to 200.dp,        // Libra
+        (-100).dp to 170.dp,   // Scorpio
+        (-170).dp to 100.dp,   // Sagittarius
+        (-200).dp to 0.dp,     // Capricorn
+        (-170).dp to (-100).dp,// Aquarius
+        (-100).dp to (-170).dp // Pisces
+    )
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(440.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        offsets.forEachIndexed { i, (x, y) ->
+            CardSlot(
+                index = i,
+                state = state,
+                onReveal = onReveal,
+                onExpand = onExpand,
+                modifier = Modifier.offset(x = x, y = y)
+            )
+        }
+    }
+}
+
+@Composable
 private fun CompatibilityHLayout(
     state: ReadingViewModel.Ui.Result,
     onReveal: (Int) -> Unit,
     onExpand: (Int) -> Unit
 ) {
-    // Order: You, Partner, Bridge, Challenge, Alignment, Lesson, Outcome
+    // Order: You (Mind, Heart, Root/Passion), Bond, Partner (Mind, Heart, Root/Passion)
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -334,13 +372,13 @@ private fun CompatibilityHLayout(
         contentAlignment = Alignment.Center
     ) {
         val offsets = listOf(
-            (-180).dp to (-60).dp, // You
-            180.dp to (-60).dp,    // Partner
-            0.dp to (-120).dp,     // Bridge (top bar)
-            0.dp to 0.dp,          // Challenge (center bar)
-            0.dp to 120.dp,        // Alignment (bottom bar)
-            (-180).dp to 120.dp,   // Lesson (left bottom)
-            180.dp to 120.dp       // Outcome (right bottom)
+            (-180).dp to (-140).dp, // You — Mind
+            (-180).dp to 0.dp,      // You — Heart
+            (-180).dp to 140.dp,    // You — Root/Passion
+            0.dp to 0.dp,           // Bond Between (horizontal bridge)
+            (180).dp to (-140).dp,  // Partner — Mind
+            (180).dp to 0.dp,       // Partner — Heart
+            (180).dp to 140.dp      // Partner — Root/Passion
         )
         offsets.forEachIndexed { i, (x, y) ->
             CardSlot(

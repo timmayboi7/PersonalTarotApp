@@ -1,3 +1,4 @@
+@file:Suppress("unused")
 package com.timmay.tarot.di
 
 import android.content.Context

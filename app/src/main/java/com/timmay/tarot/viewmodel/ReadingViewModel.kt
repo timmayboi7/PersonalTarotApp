@@ -2,11 +2,11 @@ package com.timmay.tarot.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.timmay.tarot.di.IoDispatcher
 import com.timmay.tarot.domain.CardWithState
 import com.timmay.tarot.domain.Interpreter
 import com.timmay.tarot.domain.Spread
 import com.timmay.tarot.domain.TarotRng
-import com.timmay.tarot.di.IoDispatcher
 import com.timmay.tarot.repo.CardStore
 import com.timmay.tarot.repo.SpreadRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.time.ZoneId
 import javax.inject.Inject
 
 @HiltViewModel

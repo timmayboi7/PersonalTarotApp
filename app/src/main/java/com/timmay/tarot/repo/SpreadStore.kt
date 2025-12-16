@@ -1,7 +1,6 @@
 package com.timmay.tarot.repo
 
 import com.timmay.tarot.domain.Spread
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import java.io.InputStream
 import javax.inject.Inject
